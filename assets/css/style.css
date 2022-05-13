@@ -1,0 +1,918 @@
+@charset "UTF-8";
+/* ===リセット=== */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ===テンプレ=== */
+img {
+  vertical-align: bottom;
+}
+
+.clear-fix {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.ds-f {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inner {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===共通=== */
+body {
+  color: #363232;
+  font-family: "游明朝",sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+/* ===紙吹雪用=== */
+html, body {
+  height: 100%;
+  /*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js {
+  position: fixed;
+  /*描画固定*/
+  z-index: -1;
+  /*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color: #E6C73C;
+  /*背景色*/
+  pointer-events: none;
+}
+
+#wrapper {
+  position: relative;
+  /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+header .inner {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .g_nav li {
+  height: 90px;
+  line-height: 90px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header nav .g_nav li ul {
+  display: none;
+  position: absolute;
+  top: 90px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+header nav .g_nav li a {
+  display: block;
+  text-decoration: none;
+  color: #363232;
+  padding: 0 10px;
+  text-align: center;
+}
+
+header nav .g_nav li a:hover {
+  background-color: #ccc;
+}
+
+.main_visual {
+  position: relative;
+  overflow: hidden;
+}
+
+.main_visual.inner {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main_visual > p:first-child {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main_visual > p:nth-child(2) {
+  font-size: 2rem;
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  margin: auto;
+  color: #fff;
+}
+
+.main_visual .human {
+  left: 43%;
+  top: 10%;
+  position: absolute;
+  margin: auto;
+}
+
+.main_visual .explanation {
+  text-align: center;
+}
+
+.main_visual .explanation p {
+  padding-top: 200px;
+  font-size: 2rem;
+}
+
+.main_visual .explanation p:last-child {
+  margin-bottom: 200px;
+}
+
+main button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 0.875rem;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Yomogi', cursive;
+}
+
+main .quiz {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: help;
+}
+
+main .quiz .quizbox .r_after {
+  text-align: center;
+  padding-bottom: 50px;
+  color: #e83f6f;
+}
+
+main .quiz .quizbox .questionbox {
+  text-align: center;
+  padding-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+main .quiz .quizbox .selectbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .quiz .right, main .quiz .false {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 1.875rem;
+  padding-bottom: 50px;
+}
+
+main section.profile {
+  background-color: #fc9e4f;
+  padding-bottom: 100px;
+}
+
+main section.profile h4 {
+  text-align: center;
+  background-image: url(../images/idea.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 1.5rem;
+  height: 180px;
+  line-height: 120px;
+  margin-left: 150px;
+}
+
+main section.profile .profilebox {
+  position: relative;
+}
+
+main section.profile .profilebox .contents {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main section.profile .profilebox .contents span {
+  color: #e83f6f;
+  text-decoration: underline;
+}
+
+main section.profile .profilebox .contents p:first-child {
+  width: 320px;
+}
+
+main section.profile .profilebox .contents p:last-child {
+  width: 350px;
+}
+
+main section.profile .profilebox .contents p img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+main section.profile .profilebox .contents .text {
+  width: 350px;
+  margin: 0;
+  padding: 5px;
+  background-color: #fff;
+  border: 5px solid #363232;
+}
+
+main section.profile .profilebox .contents .image {
+  width: 320px;
+  border: 5px solid #363232;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+  background: #fff;
+}
+
+main section.profile .profilebox .contents .line {
+  position: absolute;
+  top: 10%;
+  left: 47.8%;
+  height: 130px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border: 3px solid #363232;
+  background-color: #363232;
+}
+
+main section.profile .github {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 1.125rem;
+}
+
+main section.profile .mywish {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section.profile .mywish h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+main section.myskills {
+  background-color: #8bd649;
+  padding-bottom: 100px;
+}
+
+main section.myskills h3 {
+  padding-top: 50px;
+  margin-bottom: 50px;
+  color: #e83f6f;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+main section.myskills h4 {
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.125rem;
+}
+
+main section.myskills .inner {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section.myskills .inner .skillbox {
+  width: 250px;
+}
+
+main section.myskills .inner .skillbox p {
+  font-size: 0.875rem;
+}
+
+main section.myskills .inner .skillbox p:last-child {
+  padding-left: 20px;
+}
+
+main section.myskills .inner .skillbox p img {
+  display: block;
+  margin: 0 auto 10px;
+}
+
+main section.myskills .inner .school .schoolskills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  row-gap: 30px;
+}
+
+main section.myskills .inner .others .othersskills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  row-gap: 30px;
+}
+
+main section.myskills .inner .others .othersskills .gh_logo {
+  height: 199px;
+  /*logoの画像の高さが199pxだったため*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section.contact {
+  background-color: #8bd649;
+  padding-bottom: 100px;
+}
+
+main section.contact .inner {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section.contact .inner > p {
+  margin-bottom: 50px;
+}
+
+main section.contact .inner form label {
+  float: left;
+  width: 200px;
+}
+
+main section.contact .inner form .name, main section.contact .inner form .email, main section.contact .inner form .coment {
+  margin: 0 auto 50px;
+  width: 60%;
+}
+
+main section.contact .inner form .submit {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main section.contact .inner form .submit input {
+  -webkit-box-shadow: 1px 1px 3px #000;
+          box-shadow: 1px 1px 3px #000;
+  padding: 10px 50px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  background-color: #fc9e4f;
+  border: 1px solid #000;
+}
+
+main section.contact .inner form .submit input:hover {
+  -webkit-transform: translate(1px, 1px);
+          transform: translate(1px, 1px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main section.contact .inner form input[name="myname"], main section.contact .inner form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #8bd649;
+  resize: none;
+  padding: 10px;
+}
+
+main section.contact .inner form textarea {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #8bd649;
+  resize: none;
+  padding: 10px;
+}
+
+main section.contact .inner form .alert {
+  color: #e83f6f;
+  font-weight: bold;
+}
+
+main .works {
+  background-color: #fc9e4f;
+  padding-bottom: 100px;
+}
+
+main .works .inner > p {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+main .works .inner .ds-f {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 50px;
+}
+
+main .works .inner .ds-f .worksbox .img {
+  -webkit-box-shadow: 3px 3px 10px #000;
+          box-shadow: 3px 3px 10px #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-bottom: 10px;
+}
+
+main .works .inner .ds-f .worksbox .img:hover {
+  -webkit-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+main .works .inner .ds-f .worksbox p:last-child {
+  text-align: center;
+}
+
+main .totop {
+  position: fixed;
+  bottom: 0;
+  right: calc((100% - 1280px)/2);
+  /*表示される画面の横幅が大きくなっても常に画面の右下に表示される*/
+  opacity: 0;
+}
+
+main .totop a {
+  display: block;
+  width: 100%;
+}
+
+main .totop a:hover {
+  opacity: 0.5;
+}
+
+main .totop a img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+main .totop .upactive:hover {
+  -webkit-animation: Totop 2s infinite;
+          animation: Totop 2s infinite;
+}
+
+@-webkit-keyframes Totop {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes Totop {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+main .totop.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
+}
+
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+main .totop.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+main .empty {
+  width: 100%;
+}
+
+footer {
+  background-color: transparent;
+  padding: 200px 0 100px;
+}
+
+footer .eachTextAnime {
+  font-size: 3.125rem;
+  margin-bottom: 100px;
+}
+
+footer .eachTextAnime span {
+  opacity: 0;
+}
+
+footer .eachTextAnime.appeartext span {
+  -webkit-animation: text_anime_on 1s ease-out forwards;
+          animation: text_anime_on 1s ease-out forwards;
+}
+
+@-webkit-keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text_anime_on {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer p {
+  text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .inner {
+    width: auto;
+  }
+  body {
+    font-size: 0.875rem;
+  }
+  header div.ds-f {
+    display: block;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  header div.ds-f h1 {
+    text-align: center;
+    background-color: #fff;
+  }
+  header div.ds-f h1 a img {
+    width: 30%;
+  }
+  header div.ds-f nav .g_nav li {
+    position: relative;
+  }
+  header div.ds-f nav .g_nav li.has-child ul {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+    /*JSのslidetoggleで表示させるため非表示に*/
+    -webkit-transition: none;
+    transition: none;
+    /*JSで制御するためCSSのアニメーションを切る*/
+  }
+  header div.ds-f nav .g_nav li.has-child::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 44%;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #363232;
+    border-right: 2px solid #363232;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  header div.ds-f nav .g_nav li.has-child.active::before {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .main_visual.inner {
+    width: 100%;
+  }
+  .main_visual.inner > p:nth-child(2) {
+    font-size: 0.875rem;
+    top: 1%;
+    left: 37%;
+  }
+  .main_visual.inner .human {
+    top: 8%;
+    left: 42%;
+  }
+  .main_visual.inner .human img {
+    width: 35%;
+  }
+  .main_visual.inner .explanation p {
+    font-size: 1.125rem;
+    padding-top: 100px;
+  }
+  .main_visual.inner .explanation p:last-child {
+    margin-bottom: 100px;
+  }
+  main h2 {
+    font-size: 1.75rem;
+  }
+  main button {
+    margin-bottom: 40px;
+  }
+  main .quiz {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  main .quiz .quizbox .r_after {
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  main .quiz .quizbox .questionbox {
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  main .quiz .quizbox .selectbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .quiz .right, main .quiz .false {
+    font-size: 1.125rem;
+    padding-bottom: 0;
+  }
+  main section.profile h4 {
+    background-image: url(../images/spidea.png);
+    font-size: 1.125rem;
+    margin-left: 0;
+    line-height: 130px;
+  }
+  main section.profile .profilebox .contents {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section.profile .profilebox .contents p:first-child {
+    margin-bottom: 100px;
+  }
+  main section.profile .profilebox .contents .line {
+    height: 105px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  main section.profile .profilebox .contents.highschool .line {
+    top: 170px;
+  }
+  main section.profile .profilebox .contents.college .line {
+    top: 125px;
+  }
+  main section.profile .profilebox .contents.society1 .line {
+    top: 195px;
+  }
+  main section.profile .profilebox .contents.society2 .line {
+    top: 240px;
+  }
+  main section.profile .profilebox .contents.society3 .line {
+    top: 195px;
+  }
+  main section.profile .profilebox .contents .image, main section.profile .profilebox .contents .text {
+    margin: 0 auto;
+  }
+  main section.profile .github {
+    font-size: 0.875rem;
+  }
+  main section.profile .mywish {
+    width: 100%;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  main section.profile .mywish h3 {
+    font-size: 1.125rem;
+  }
+  main section.myskills .inner {
+    width: 100%;
+    margin: 0;
+  }
+  main section.myskills .inner .skillbox {
+    margin: 0 auto;
+  }
+  main section.myskills .inner .skillbox p img {
+    width: 50%;
+  }
+  main section.myskills .inner > p {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  main section.myskills .inner .school .schoolskills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section.myskills .inner .others .othersskills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section.myskills h3 {
+    font-size: 1.125rem;
+  }
+  main section.contact .inner {
+    width: 100%;
+    margin: 0;
+  }
+  main section.contact .inner > p {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  main section.contact .inner form label {
+    float: none;
+    width: 100%;
+  }
+  main .works .inner > p {
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  main .works .inner .ds-f {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  main .works .inner .ds-f .worksbox .img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .works .inner .ds-f .worksbox .img a {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  main .works .inner .ds-f .empty {
+    display: none;
+  }
+  main .totop {
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    z-index: 2;
+  }
+  main .totop a img {
+    width: 50%;
+  }
+  footer {
+    padding-top: 100px;
+  }
+  footer .eachTextAnime {
+    font-size: 1.75rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

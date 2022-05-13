@@ -1,0 +1,929 @@
+@charset "utf-8";
+
+//変数
+$cWhite:#fff;
+$chWhite:rgba(255,255,255,0.5);
+$cBlack:#363232;
+$csBlack:#000;
+$cGray:#ccc;
+$cPink:#e83f6f;
+$cOrange:#fc9e4f;
+$cGreen:#8bd649;
+$cYellow:#E6C73C;
+
+
+ /* ===リセット=== */
+ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+/* ===テンプレ=== */
+img{
+  vertical-align: bottom;
+}
+.clear-fix{
+  content: "";
+  clear: both;
+  display: block;
+}
+.ds-f{
+  display: flex;
+}
+.inner{
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ===共通=== */
+body{
+  color: $cBlack;
+  font-family: "游明朝",sans-serif;
+}
+.hide{
+  display:none;
+}
+/* ===紙吹雪用=== */
+html,body{
+  height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+  position:fixed;/*描画固定*/
+  z-index:-1;/*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color:$cYellow;/*背景色*/
+  pointer-events: none;
+}
+
+#wrapper{
+  position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  width:100%;
+  height: 100%;
+}
+
+// ===header===
+header{
+  background-color: $chWhite;
+
+  & .inner{
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  & nav{
+    & .g_nav{
+      & li{
+        height: 90px;
+        line-height: 90px;
+        width:100px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        & ul{
+          display: none;
+          position: absolute;
+          top: 90px;
+          z-index: 2;
+          background-color:$cWhite;
+        }
+
+        & a{
+          display: block;
+          text-decoration: none;
+          color: $cBlack;
+          padding: 0 10px;
+          text-align: center;
+        
+          &:hover{
+            background-color:$cGray;
+          }
+        }
+      }
+    }
+  }
+}
+//main_visual
+.main_visual{
+  position: relative;
+  overflow: hidden;
+  
+  &.inner{
+    width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &>p{
+    &:first-child{
+    width: 100%;
+    margin:0 auto;
+    }
+
+    &:nth-child(2){
+      font-size: 2rem;
+      position: absolute;
+      top: 5%;
+      left: 40%;
+      margin: auto;
+      color: $cWhite;
+    }  
+  }
+
+  & .human{
+    left: 43%;
+    top: 10%;
+    position: absolute;
+    margin: auto;
+  }
+
+  & .explanation{
+    text-align: center;
+    
+    & p{
+      padding-top: 200px;
+      font-size: 2rem;
+
+      &:last-child{
+        margin-bottom: 200px;
+      }
+    }
+  }
+}
+
+//main
+main{
+  //quiz
+  & button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: 0.875rem;
+  }
+
+  & h2{
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Yomogi', cursive;
+  }
+
+  & .quiz{
+    width:800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    cursor: help;
+    
+    & .quizbox{
+      & .r_after{
+        text-align: center;
+        padding-bottom: 50px;
+        color: $cPink;
+      }
+
+      & .questionbox{
+        text-align: center;
+        padding-bottom: 30px;
+        font-weight: bold;
+        font-size: 1.125rem;
+      }
+
+      & .selectbox{
+        display: flex;
+      }
+    }
+
+    & .right,.false{
+      text-align: center;
+      padding-top: 100px;
+      font-size: 1.875rem;
+      padding-bottom: 50px;
+    }
+  }
+
+  
+  & section{
+    //Profile
+    &.profile{
+      background-color: $cOrange;
+      padding-bottom: 100px;
+
+      & h4{
+        text-align: center;
+        background-image: url(../images/idea.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 1.5rem;
+        height: 180px;
+        line-height: 120px;
+        margin-left: 150px;
+      }
+    
+      & .profilebox{
+        position: relative;
+
+        & .contents{
+          width:800px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 100px;
+          position: relative;
+          justify-content: space-between;
+          
+          & span{
+            color: $cPink;
+            text-decoration: underline;
+          }
+          & p{
+            &:first-child{
+              width: 320px;
+            }
+  
+            &:last-child{
+              width: 350px;
+            }
+  
+            & img{
+              display: block;
+              width: 100%;
+              height: 100%;
+            }
+          }
+  
+          & .text{
+            width: 350px;
+            margin:0;
+            padding: 5px;
+            background-color: $cWhite;
+            border: 5px solid $cBlack;
+          }
+  
+          & .image{
+            width: 320px;
+            border: 5px solid $cBlack;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+            background: $cWhite;
+          }
+  
+          & .line{
+            position: absolute;
+            top: 10%;
+            left: 47.8%;
+            height: 130px;
+            transform: rotate(90deg);
+            border: 3px solid $cBlack;
+            background-color: $cBlack;
+          }
+        }
+      }
+
+      & .github{
+        text-align: center;
+        margin-bottom: 50px;
+        font-size: 1.125rem;
+      }
+
+      & .mywish{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        & h3{
+          text-align: center;
+          font-size: 1.5rem;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    //My skills
+    &.myskills{
+      background-color: $cGreen;
+      padding-bottom: 100px;
+
+      & h3{
+        padding-top: 50px;
+        margin-bottom: 50px;
+        color: $cPink;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      & h4{
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 1.125rem;
+      }
+      & .inner{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        & .skillbox{
+          width: 250px;
+
+          & p{
+            font-size: 0.875rem;
+      
+            &:last-child{
+            padding-left: 20px;
+            }
+
+            & img{
+              display: block;
+              margin: 0 auto 10px;
+            }
+          }
+        }
+
+        & .school{
+          & .schoolskills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            row-gap: 30px;
+          }
+        }
+
+        & .others{
+          & .othersskills{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            row-gap: 30px;
+
+            & .gh_logo{
+              height: 199px;/*logoの画像の高さが199pxだったため*/
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    //Contact me
+    &.contact{
+      background-color: $cGreen;
+      padding-bottom: 100px;
+      
+      & .inner{
+        width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &>p{
+          margin-bottom: 50px;
+        }
+        & form{
+
+          & label{
+            float: left;
+            width: 200px;
+          }
+          & .name,.email,.coment{
+            margin:0 auto 50px;
+            width: 60%;
+          }
+          & .submit{
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+
+            & input{
+              box-shadow: 1px 1px 3px $csBlack;
+              padding: 10px 50px;
+              transition: .3s;
+              cursor: pointer;
+              background-color:$cOrange;
+              border: 1px solid $csBlack;
+            
+              &:hover{
+                transform: translate(1px,1px);
+                box-shadow: none;
+              } 
+            }
+          }
+          & input[name="myname"],input[type="email"]{
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            border:none;
+            border-bottom: 1px solid $csBlack;
+            background-color: $cGreen;
+            resize: none;
+            padding: 10px;
+          }
+
+          & textarea{
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            border:none;
+            border-bottom: 1px solid $csBlack;
+            background-color: $cGreen;
+            resize: none;
+            padding: 10px;
+          }
+
+          & .alert{
+            color: $cPink;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+  //Works
+  & .works{
+    background-color:$cOrange;
+    padding-bottom: 100px;
+  
+    & .inner{
+      &>p{
+        margin-bottom: 50px;
+        text-align: center;
+      }
+  
+      & .ds-f{
+        justify-content: space-around;
+        flex-wrap:wrap;
+        row-gap: 50px;
+  
+        & .worksbox{
+          & .img{
+            box-shadow: 3px 3px 10px $csBlack;
+            transition: .3s;
+            margin-bottom: 10px;
+  
+            &:hover{
+              transform: translate(3px,3px);
+              box-shadow: none;
+              cursor: pointer;
+            }
+          }
+          & p{
+            &:last-child{
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  & .totop{
+    position: fixed;
+    bottom: 0;
+    right: calc((100% - 1280px)/2);/*表示される画面の横幅が大きくなっても常に画面の右下に表示される*/
+    opacity: 0;
+
+    & a{
+      display: block;
+      width: 100%;
+
+      &:hover{
+        opacity: 0.5;
+      }
+      
+      & img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+      }
+    }
+
+    & .upactive{
+
+      &:hover{
+        animation: Totop 2s infinite;
+        @keyframes Totop{
+          0%{
+            transform: translateY(0);
+          }
+          50%{
+            transform: translateY(-20px);
+          }
+          100%{
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+    &.UpMove{
+      animation: UpAnime 0.5s forwards;
+
+      @keyframes UpAnime{
+        from {
+          opacity: 0;
+        transform: translateY(100px);
+        }
+        to {
+          opacity: 1;
+        transform: translateY(0);
+        }
+      }
+    }
+    &.DownMove{
+      animation: DownAnime 0.5s forwards;
+
+      @keyframes DownAnime{
+        from {
+          opacity: 1;
+        transform: translateY(0);
+        }
+        to {
+          opacity: 1;
+        transform: translateY(100px);
+        }
+      }
+    }
+  }
+
+  & .empty{
+    width: 100%;
+  }
+}
+
+//footer
+footer{
+  background-color:transparent;
+  padding: 200px 0 100px;
+
+  & .eachTextAnime{
+    font-size: 3.125rem;
+    margin-bottom: 100px;
+    
+    & span{
+      opacity: 0;
+    }
+
+    &.appeartext{
+      & span{
+        animation:text_anime_on 1s ease-out forwards;
+        @keyframes text_anime_on {
+          0% {
+            opacity:0;
+          }
+          100% {
+            opacity:1;
+          }
+        }
+      }
+    }
+  }
+
+  & p{
+  text-align: center;
+  }
+}
+
+//sp
+@media screen and (max-width:480px){
+  img{
+    width:100%;
+    height: auto;
+  }
+  .inner{
+    width: auto;
+  }
+  body{
+    font-size: 0.875rem;
+  }
+  //header
+  header{
+    div{
+      &.ds-f{
+        display: block;
+        justify-content: left;
+
+        & h1{
+          text-align: center;
+          background-color: $cWhite;
+    
+          & a{
+            & img{
+              width: 30%;
+            }
+          }
+        }
+
+        & nav{
+          & .g_nav{
+            & li{
+              position: relative;
+
+              &.has-child{
+                & ul{
+                  position: relative;
+                  left:0;
+                  top:0;
+                  width:100%;
+                  display: none;/*JSのslidetoggleで表示させるため非表示に*/
+                  transition:none;/*JSで制御するためCSSのアニメーションを切る*/
+                }
+
+                &::before{
+                  content:"";
+                  position: absolute;
+                  left: 10px;
+                  top: 44%;
+                  width:6px;
+                  height:6px;
+                  border-top: 2px solid $cBlack;
+                  border-right:2px solid $cBlack;
+                  transform: rotate(135deg);
+                }
+
+                &.active{
+                  &::before{
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //main_visual
+  .main_visual{
+    &.inner{
+      width:100%;
+      &>p{
+        &:nth-child(2){
+          font-size:0.875rem;
+          top: 1%;
+          left: 37%;
+        }
+      }
+
+      & .human{
+        top: 8%;
+        left: 42%;
+
+        & img{
+          width: 35%;
+        }
+      }
+
+      & .explanation{
+        & p{
+          font-size:1.125rem;
+          padding-top:100px;
+          
+          &:last-child{
+            margin-bottom: 100px;
+          }
+        }
+      }
+    }
+  }
+  
+  //main
+  main{
+    & h2{
+      font-size: 1.75rem;
+    }
+
+    & button{
+      margin-bottom: 40px;
+    }
+
+    & .quiz{
+      width: 100%;
+      padding-bottom: 0;
+      
+      & .quizbox{
+        & .r_after{
+          text-align: left;
+          box-sizing: border-box;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        & .questionbox{
+          text-align: left;
+          box-sizing: border-box;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        & .selectbox{
+          flex-direction: column;
+        }
+      }
+
+      & .right,.false{
+        font-size: 1.125rem;
+        padding-bottom: 0;
+      }
+    }
+
+    & section{
+      //profile
+      &.profile{
+        & h4{
+          background-image: url(../images/spidea.png);
+          font-size: 1.125rem;
+          margin-left: 0;
+          line-height: 130px;
+        }
+        & .profilebox{
+          & .contents{
+            width:100%;
+            flex-direction: column;
+
+            & p{
+              &:first-child{
+                margin-bottom:100px;
+              }
+            }
+
+            & .line{
+              height: 105px;
+              transform: rotate(0deg);
+            }
+
+            &.highschool{
+              & .line{
+                top: 170px;
+              }
+            }
+            &.college{
+              & .line{
+                top:125px;
+              }
+            }
+            &.society1{
+              & .line{
+                top: 195px;
+              }
+            }
+            &.society2{
+              & .line{
+                top:240px;
+              }
+            }
+            &.society3{
+              & .line{
+                top: 195px;
+              }
+            }
+
+            & .image,.text{
+              margin: 0 auto;
+            }
+  
+          }
+
+        }
+
+        & .github{
+          font-size: 0.875rem;
+        }
+
+        & .mywish{
+          width: 100%;
+          margin: 0;
+          box-sizing: border-box;
+          padding:0 10px;
+
+          h3{
+            font-size: 1.125rem;
+          }
+        }
+      }
+      //My skills
+      &.myskills{
+        & .inner{
+          width: 100%;
+          margin: 0;
+
+          & .skillbox{
+            margin: 0 auto;
+
+            & p{
+              & img{
+                width: 50%;
+              }
+            }
+          }
+
+          &>p{
+            box-sizing: border-box;
+            padding: 0 10px;
+          }
+
+          & .school{
+            & .schoolskills{
+              flex-direction: column;
+            }
+          }
+
+          & .others{
+            & .othersskills{
+              flex-direction: column;
+            }
+          }
+        }
+
+        & h3{
+          font-size: 1.125rem;
+        }
+      }
+      //Contact me
+      &.contact{
+        & .inner{
+          width: 100%;
+          margin: 0;
+
+          &>p{
+            box-sizing: border-box;
+            padding: 0 10px;
+          }
+
+          & form{
+            & label{
+              float: none;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    
+    //Works
+    & .works{
+      & .inner{
+        &>p{
+          text-align: left;
+          box-sizing: border-box;
+          padding: 0 10px;
+        }
+
+        & .ds-f{
+          flex-direction: column;
+          flex-wrap: nowrap;
+
+          & .worksbox{
+            & .img{
+              width: 80%;
+              margin-left: auto;
+              margin-right: auto;
+
+              & a{
+                display: block;
+                width: 100%;
+                margin: 0;
+              }
+            }
+          }
+
+          & .empty{
+            display: none;
+          }
+        }
+      }
+    }
+
+    & .totop{
+      right: 0;
+      bottom:0;
+      opacity: 0;
+      transform: translateY(100px);
+      z-index: 2;
+
+      & a{
+        & img{
+          width: 50%;
+        }
+      }
+    }
+
+  }
+  //footer
+  footer{
+    padding-top: 100px;
+
+    & .eachTextAnime{
+    font-size: 1.75rem;
+    }
+  }
+
+
+
+
+}
