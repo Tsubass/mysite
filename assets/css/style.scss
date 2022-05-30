@@ -473,8 +473,13 @@ main{
             }
           }
           & p{
-            &:last-child{
+            &:not(first-child){
               text-align: center;
+            }
+            & a{
+              text-decoration: none;
+              color:$cPink;
+              font-weight: bold;
             }
           }
         }

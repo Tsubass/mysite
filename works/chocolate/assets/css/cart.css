@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+main .inner h2{
+    text-align: center;
+    padding-top: 300px;
+    margin-bottom: 50px;
+    font-size:2.25rem;
+}
+/*カートに何も入っていないときの装飾*/
+main .cartinside p{
+    margin-bottom: 50px;
+    text-align: center;
+}
+main #privacy a{
+    color: #5b362e;
+}
+main .cartinside .products{
+    text-align: center;
+}
+main .cartinside .products.ds-f{
+    justify-content: space-around;
+    font-size: 1rem;
+}
+main .cartinside .products dl{
+    width: 50%;
+    margin: 0 auto;
+}
+main .cartinside .products dt{
+    border-bottom: 1px solid #5b362e;
+}
+main .cartinside .products dd:last-child{
+    border-bottom:1px solid #5b362e;
+}
+main .cartinside .btn{
+    width: 25%;
+    margin: 0 auto 50px;
+}
+main .cartinside .btn a{
+    font-size: 1rem;
+}
+main .cartinside .pricebox dd::before{
+    content: "￥";
+}
+main .products dl dd{
+    padding: 20px 0;
+    font-size: 1.125rem;
+}
+main .cartinside .purchase{
+    padding-top: 50px;
+}
+main .cartinside #total{
+    padding-top: 70px;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:480px){
+    main .inner h2{
+        padding-top: 150px;
+        font-size: 1.5rem;
+    }
+    main .cartinside #privacy{
+        text-align: left;
+        margin: 0 20px 50px;
+    }
+    main .cartinside .btn{
+        width: 75%;
+        margin: 0 auto 50px;
+    }
+    main .cartinside #total{
+        text-align: center;
+    }
+    main .btn li a::before{
+        background-color:#ddbb99;
+    }
+    main .cartinside #total{
+        font-size: 0.875rem;
+        padding-top: 50px;
+    }
+    main .cartinside .products dl dt,main .cartinside .products dl dd{
+        font-size: 0.875rem;
+    }
+}

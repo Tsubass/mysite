@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Pet Life | SHOP</title>
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/shop.css">
+  <link rel="icon" href="../favicon.ico">
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/shop.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="inner">
+
+      <div class="hum_btn">
+        <p>メニュー</p>
+      </div>
+
+
+      <div class="ds_f">
+        <h1 class="logo">
+          <a href="../index.html"><img src="../assets/images/common/logo.png" alt="Happy Pet Life"></a>
+        </h1>
+        <nav class="g_nav">
+          <ul class="ds_f">
+            <li><a href="../index.html">top</a></li>
+            <li><a href="../about/index.html">about</a></li>
+            <li><a href="../information/index.html">information</a></li>
+            <li><a href="../company/index.html">company</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="ds_f header_form">
+        <form action="#" method="get">
+          <input type="search" name="search" autocomplete="on" list="category" placeholder="商品を検索">
+          <datalist id="category">
+            <option value="リード・首輪">
+            <option value="服・装飾">
+            <option value="お散歩用品">
+          </datalist>
+          <div class="submit">
+            <input type="submit" value="検索">
+          </div>
+        </form>
+
+        <div class="btn login_btn">
+          <p><a href="../form/index.html">ログイン</a></p>
+        </div>
+
+        <div class="btn cart_btn">
+          <p class=cart_look><a href="#">カートを見る</a></p>
+          <p id=num></p>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="inner">
+      <div class="buttons ds_f">
+        <button value="all">すべて</button>
+        <button value="food">フード</button>
+        <button value="toy">おもちゃ</button>
+        <button value="sanitary">衛生用品</button>
+        <button value="cloth">洋服</button>
+        <button value="collar">首輪・ハーネス</button>
+      </div>
+
+      <div class="main_content">
+        <ul class="ds_f" id="list">
+          <li class="toy">
+            <a href="../shop/shop_toy_01.html">
+              <div class="figure">
+                <img src="../assets/images/shop/toy_01.jpg" alt="ダンベルのおもちゃ">
+                <p class="fig_caption">跳ねる方向が不規則だからわんちゃんも目が離せない！やわらかい素材なので室内でも安全にご利用いただけます。
+                </p>
+              </div>
+              <h3>ダンベルのおもちゃ</h3>
+              <p class="price">¥500(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="toy">
+            <a href="../shop/shop_toy_02.html">
+              <div class="figure">
+                <img src="../assets/images/shop/toy_02.jpg" alt="あひるのおもちゃ">
+                <p class="fig_caption">力を加えるとガアガアと鳴きます。癖になる噛み心地。</p>
+              </div>
+              <h3>あひるのおもちゃ</h3>
+              <p class="price">¥300(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="sanitary">
+            <a href="../shop/shop_sanitary_01.html">
+              <div class="figure">
+                <img src="../assets/images/shop/sanitary_01.jpg" alt="早食い防止プレート">
+                <p class="fig_caption">緩やかな突起で食べるスピードを落とし、早食いや吐き戻しの対策に。</p>
+              </div>
+              <h3>早食い防止プレート</h3>
+              <p class="price">¥1,100(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="cloth">
+            <a href="../shop/shop_cloth_01.html">
+              <div class="figure">
+                <img src="../assets/images/shop/cloth_01.png" alt="耳付きフーディー">
+                <p class="fig_caption">ぴょこんと飛び出た耳がかわいい！軽い素材なのでわんちゃんも快適。</p>
+              </div>
+              <h3>耳付きフーディー</h3>
+              <p class="price">¥1,650(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="cloth">
+            <a href="../shop/shop_cloth_02.html">
+              <div class="figure"><img src="../assets/images/shop/cloth_02.jpg" alt="小型犬用パーカー">
+                <p class="fig_caption">一年を通して着やすいフード付きお洋服です。</p>
+              </div>
+              <h3>小型犬用パーカー</h3>
+              <p class="price">¥2,200(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="cloth">
+            <a href="shop_cloth_03.html">
+              <div class="figure"><img src="../assets/images/shop/cloth_03.jpg" alt="パーカー(黄)">
+                <p class="fig_caption">鮮やかな黄色が目を引く。シンプルで着せやすい。</p>
+              </div>
+              <h3>パーカー(黄)</h3>
+              <p class="price">¥1,650(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="collar">
+            <a href="shop_collar_01.html">
+              <div class="figure"><img src="../assets/images/shop/item_01.jpg" alt="アヒル型口輪">
+                <p class="fig_caption">お散歩中や来客で吠えちゃうわんちゃんに。サイズも豊富。</p>
+              </div>
+              <h3>あひる型口輪</h3>
+              <p class="price">¥1,100(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="collar">
+            <a href="shop_collar_02.html">
+              <div class="figure"><img src="../assets/images/shop/item_02.jpg" alt="首輪(リボン)">
+                <p class="fig_caption">スペシャルな日に。もちろん普段使いにも◎</p>
+              </div>
+              <h3>首輪(リボン)</h3>
+              <p class="price">¥2,240(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="sanitary">
+            <a href="shop_sanitary_02.html">
+              <div class="figure"><img src="../assets/images/shop/sanitary_02.jpg" alt="マナーカプセル">
+                <p class="fig_caption">お散歩中の急な催しもこれ一つで安心です。</p>
+              </div>
+              <h3>マナーカプセル</h3>
+              <p class="price">¥1,980(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="collar">
+            <a href="shop_collar_03.html">
+              <div class="figure"><img src="../assets/images/shop/item_03.jpg" alt="首輪(ネクタイ)">
+                <p class="fig_caption">おめかしさせたい時に！お散歩には不向きです。</p>
+              </div>
+              <h3>首輪(ネクタイ)</h3>
+              <p class="price">¥1,980(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="food">
+            <a href="shop_food_01.html">
+              <div class="figure"><img src="../assets/images/shop/food_01.jpg" alt="犬用ジャーキー">
+                <p class="fig_caption">国産の鶏肉100％　無添加なので安心安全です。</p>
+              </div>
+              <h3>犬用ジャーキー</h3>
+              <p class="price">¥660(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="food">
+            <a href="shop_food_02.html">
+              <div class="figure"><img src="../assets/images/shop/food_02.jpg" alt="ドッグフード">
+                <p class="fig_caption">小粒なので小型のわんちゃんも食べやすい！栄養バランスの整ったオーガニックドッグフード。</p>
+              </div>
+              <h3>ドッグフード</h3>
+              <p class="price">¥1,200(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="food">
+            <a href="shop_food_03.html">
+              <div class="figure"><img src="../assets/images/shop/food_03.jpg" alt="3種比べセット">
+                <p class="fig_caption">話題のメーカーのフードを一食ずつご用意してます。ぜひお試しください！</p>
+              </div>
+              <h3>３種食べ比べセット</h3>
+              <p class="price">¥1,200(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="toy">
+            <a href="shop_toy_03.html">
+              <div class="figure"><img src="../assets/images/shop/toy_03.jpg" alt="">
+                <p class="fig_caption">弾みが大きいのでわんちゃんも大興奮。屋外向けの商品です。</p>
+              </div>
+              <h3>ボール</h3>
+              <p class="price">¥600(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="sanitary">
+            <a href="shop_sanitary_03.html">
+              <div class="figure"><img src="../assets/images/shop/sanitary_03.jpg" alt="プレート">
+                <p class="fig_caption">使いやすいノーマルサイズ。</p>
+              </div>
+              <h3>プレート</h3>
+              <p class="price">¥800(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+          <li class="cloth">
+            <a href="shop_cloth_04.html">
+              <div class="figure"><img src="../assets/images/shop/cloth_04.jpg" alt="小型犬ペアルック">
+                <p class="fig_caption">小型犬用のカジュアルなペアルック。わんちゃんの肌に優しい素材を利用しています。</p>
+              </div>
+              <h3>小型犬ペアルック</h3>
+              <p class="price">¥4,240(税込み)</p>
+            </a>
+            <p class="cartin"><a href="#">カートに入れる</a></p>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="push">
+        <div>
+          <a href="#">
+            <img src="../assets/images/shop/push_01.png" alt="左へ">
+          </a>
+          <a href="#">
+            <img src="../assets/images/shop/push_02.png" alt="右へ">
+          </a>
+        </div>
+      </div>
+
+      <div id="totop">
+        <p><a href="#"><img src="../assets/images/top/totop.png" alt="トップへ戻る">topへ</a></p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="inner">
+
+      <h1 class="logo">
+        <a href="../index.html"><img src="../assets/images/common/f_logo.png" alt="Happy Pet Life"></a>
+      </h1>
+
+      <nav class="f_nav">
+        <ul class="ds_f">
+          <li><a href="../about/index.html">about</a>
+            <ul>
+              <li><a href="#">企業理念</a></li>
+              <li><a href="#">社長挨拶</a></li>
+            </ul>
+          </li>
+          <li><a href="#">shop</a>
+            <ul>
+              <li><a href="#">カテゴリー</a></li>
+              <li><a href="#">マイページ</a></li>
+            </ul>
+          </li>
+          <li><a href="#">information</a>
+            <ul>
+              <li><a href="#">キャンペーン</a></li>
+              <li><a href="#">お得なクーポン</a></li>
+              <li><a href="#">お知らせ</a></li>
+            </ul>
+          </li>
+          <li><a href="../company/index.html">company</a>
+            <ul>
+              <li><a href="#">会社概要</a></li>
+              <li><a href="#">お問い合わせ</a></li>
+            </ul>
+          </li>
+          <li><a href="../form/index.html">form</a>
+            <ul>
+              <li><a href="../form/index.html">会員登録</a></li>
+            </ul>
+          </li>
+          <li><span>SNS</span>
+            <ul class="ds_f">
+              <li class="facebook"><a href="#">Facebook</a></li>
+              <li class="twitter"><a href="#">Twitter</a>
+              </li>
+              <li class="youtube"><a href="#">Youtube</a>
+              </li>
+              <li class="insta"><a href="#">Instagram</a>
+              </li>
+              <li class="pinterest"><a href="#">Pinterest</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="f_list">
+        <ul class="ds_f">
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">特定商取引法に基づく表記</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+          <li><a href="../recruit/index.html">採用情報</a></li>
+        </ul>
+      </div>
+
+      <p>
+        <small>Copyright&copy;2022 Happy Pet Life All rights reserved.</small>
+      </p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

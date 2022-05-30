@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+body,p,ul,li{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #ddbb99;
+  color: #5b362e;
+}
+.inner_coupon{
+  width: 500px;
+  margin: 0 auto;
+}
+.inner_coupon p{
+  margin-bottom: 30px;
+  text-align: center;
+  padding-top:50px;
+}
+.inner_coupon ul li:not(:last-child){
+  margin-bottom: 15px;
+}
+.inner_coupon ul li:last-child{
+  margin-bottom: 30px;
+}
+.inner_coupon ul li::marker{
+  content: "🍫";
+}
+.qr{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.qr a{
+  color:#5b362e;
+}
+.qr a:hover{
+  opacity: 0.5;
+}
+.close{
+  width:100px;
+  margin: 20px auto;
+  text-align: center;
+}
+.close a{
+  text-decoration: none;
+  box-sizing: border-box;
+  padding:5px 10px;
+  background-color: #a68965;
+  border: 1px solid #a68965;
+  color: #fff;
+}
+.close a:hover{
+  background-color: #261308;
+}
+
+/* ===sp=== */
+@media screen and (max-width:480px){
+  /* ====テンプレ=== */
+  body{
+    font-size: 0.75rem;
+  }
+  img{
+    width: 65%;
+    height: auto;
+  }
+  .inner_coupon{
+    width: auto;
+  }
+  .inner_coupon ul li{
+    margin-right:20px;
+    margin-left:20px;
+  }
+}

@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+header .h_nav nav ul li:first-child a{
+  text-decoration: underline;
+}
+.title{
+  background-image: url(../images/about/about_bg.jpg);
+}
+main section h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+main section h2{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 100px;
+  padding-top: 20px;
+}
+main .ds-f{
+  column-gap: 50px;
+}
+main .text1 p,main .text2 p{
+  margin-bottom: 150px;
+}
+main .photo1{
+  padding-top: 20px;
+}
+main .photo1 p:not(:first-child),main .photo2 p{
+  margin-bottom: 100px;
+}
+main .photo1 .name{
+  text-align: right;
+}
+
+/* ==要素がふわっと出てくる== */
+.hide{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.hide1{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 0.5s;
+}
+/* ==要素がふわっと出てくるここまで== */
+
+@media screen and (max-width:480px){
+  main section h2{
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  main .introduce .ds-f,main .what .ds-f{
+    flex-direction: column;
+  }
+  main section h3{
+    font-size: 1.125rem;
+  }
+  main .text1 p,main .text2 p{
+    box-sizing: border-box;
+    padding:0 50px;
+    margin-bottom: 100px;
+  }
+  main .photo1,main .photo2{
+    padding-top: 0;
+    text-align: center;
+  }
+  main .photo1 p img,main .photo2 p img{
+    width: 65%;
+    margin: 0 auto;
+  }
+  main .photo1 p:not(:first-child){
+    margin-bottom: 50px;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+}

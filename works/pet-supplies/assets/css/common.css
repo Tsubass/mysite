@@ -1,0 +1,694 @@
+@charset "UTF-8";
+/*--- common.css --- */
+body,h1, h2, h3, h4, h5, h6, ul, p, dl, dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  vertical-align: bottom;
+}
+/* --------------- */
+body {
+  color: #fa8072;
+  font-size: 1.125rem;
+  font-family: "メイリオ", "Meiryo", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #fa8072;
+}
+a:hover {
+  opacity: 0.7;
+}
+.inner {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ds_f {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  background-color: #fa8072;
+  border-radius: 10px;
+}
+.btn p a {
+  color: #f2f2f2;
+}
+/* -------header-------- */
+header .logo {
+  padding-top: 50px;
+  margin-bottom: 80px;
+}
+header .hum_btn {
+  display: none;
+}
+header .g_nav {
+  padding-top: 95px;
+  margin-right: 30px;
+}
+header .g_nav ul li::after {
+  content: "|";
+}
+header .g_nav ul li:last-child::after {
+  content: "";
+}
+header .g_nav ul li a {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+header .g_nav ul li a:hover {
+  color: #fc914d;
+}
+/* -------header form-------- */
+header form {
+  margin-right: 140px;
+  height: 38px;
+  line-height: 38px;
+}
+header form input[type="search"] {
+  width: 495px;
+  height: 38px;
+  line-height: 38px; 
+  border: 1px solid #fa8072;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 12px 20px 10px;
+  color: #cc695e;
+  font-size: 1rem;
+}
+header form .submit {
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+}
+header form input[type="submit"] {
+  width: 100%;
+  height: 100%;
+  background-color: #fa8072;
+  color: transparent;
+  border: none;
+  border-radius: 10px;
+  background-image: url(../images/common/icon_search.png);
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  padding-top: 5px;
+}
+header form input[type="submit"]:hover {
+  cursor: pointer;
+}
+header .login_btn {
+  width: 125px;
+  height: 40px;
+}
+header .login_btn p {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/common/icon_login.png);
+  background-repeat: no-repeat;
+  background-position: 90px 5px;
+}
+header .login_btn:hover {
+  opacity: 0.7;
+}
+header .login_btn p a {
+  font-size: 1.125rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 8px 10px 0 20px;
+  box-sizing: border-box;
+}
+header .cart_btn {
+  margin-top: -35px;
+  width: 135px;
+  height: 100px;
+  position: relative;
+}
+header .cart_btn:hover {
+  opacity: 0.7;
+}
+header .cart_btn .cart_look {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-image: url(../images/common/cart.png);
+  background-repeat: no-repeat;
+  background-position: center 40px;
+}
+header .cart_btn #num{
+  position: absolute;
+  font-size: 0.875rem;
+  top: 38px;
+  left: 84px;
+  color: #fa8072;
+}
+header .cart_btn .cart_look a {
+  font-size: 0.875rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+/* -------main_visual-------- */
+.main_visual {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.main_visual #slide ul {
+  position: relative;
+}
+.main_visual #slide ul li {
+  position: absolute;
+  width: 100%;
+}
+.main_visual #button {
+  padding-top: 660px;
+}
+.main_visual #button ul {
+  margin-right: 445px;
+  margin-left: 445px;
+}
+.main_visual #button ul li {
+  background-color: #eec7b6;
+  border-radius: 8px;
+}
+.main_visual #button ul li a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  font-size: 0;
+  color: transparent;
+}
+.main_visual #button ul li .target {
+  background-color: #fa8072;
+  border-radius: 8px;
+}
+/* ----- ---main---top.cssに記述 ----- */
+/* -------main section pick_up------- */
+main .pickup {
+  position: relative;
+}
+main .pickup h2 {
+  margin-bottom: 20px;
+}
+main .pickup #pickup_img {
+  margin-bottom: 35px;
+}
+main .pickup #pickup_img a:hover {
+  opacity: 1;
+}
+main .pickup #pickup_img img {
+  width: 960px;
+}
+main .pickup .shop_btn p {
+  background-color: rgba(141, 103, 55, 0.5);
+  width: 218px;
+  height: 60px;
+  position: absolute;
+  text-align: center;
+  font-size: 1.5rem;
+  top: 690px;
+  right: 45px;
+}
+main .pickup .shop_btn p a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #edede6;
+  padding-top: 15px;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+/* -------main section info-------- */
+main .info h2 {
+  margin-bottom: 65px;
+}
+main .info dl {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #331a17;
+}
+main .info dl dt {
+  float: left;
+  clear: left;
+  width: 240px;
+}
+main .info dl dd {
+  margin-left: 240px;
+}
+main .info dl dd a {
+  color: #331a17;
+}
+main .info dl dt,
+main .info dl dd {
+  margin-bottom: 70px;
+}
+main .info .banner {
+  text-align: center;
+}
+main .info .sp_banner {
+  display: none;
+}
+/* -------totop-------- */
+#totop {
+  position: fixed;
+  bottom: 120px;
+  right: 35px;
+  z-index: 3;
+}
+#totop img {
+  display: block;
+}
+#totop p {
+  text-align: center;
+}
+/* -------footer-------- */
+footer {
+  padding-top: 50px;
+  background-color: #cc695e;
+}
+footer .inner {
+  height: 620px;
+  background-image: 
+  url(../images/common/nikukyu_left.png),
+  url(../images/common/nikukyu_right.png);
+  background-repeat: no-repeat;
+  background-position: 15px 425px, 800px 320px;
+}
+footer .logo {
+  margin-bottom: 50px;
+}
+footer .f_nav {
+  margin-bottom: 50px;
+}
+footer .f_nav ul li a {
+  font-size: 0.888rem;
+  color: #371410;
+}
+footer .f_nav ul li a:hover {
+  color: #fc914d;
+}
+footer .f_nav>ul>li>a,
+footer .f_nav>ul>li span {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+/* ----- sns ----- */
+footer .f_nav>ul>li:last-child ul li {
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+}
+footer .f_nav>ul>li span {
+  color: #371410;
+}
+footer .f_nav>ul>li:last-child ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  color: transparent;
+}
+footer .f_nav .facebook a {
+  background-image: url(../images/common/icon_fb.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .facebook a:hover {
+  background-image: url(../images/common/icon_fb_hover.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .twitter a {
+  background-image: url(../images/common/icon_tw.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .twitter a:hover {
+  background-image: url(../images/common/icon_tw_hover.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .youtube a {
+  background-image: url(../images/common/icon_yt.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .youtube a:hover {
+  background-image: url(../images/common/icon_yt_hover.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .insta a {
+  background-image: url(../images/common/icon_ig.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .insta a:hover {
+  background-image: url(../images/common/icon_ig_hover.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .pinterest a {
+  background-image: url(../images/common/icon_pr.png);
+  background-repeat: no-repeat;
+}
+footer .f_nav .pinterest a:hover {
+  background-image: url(../images/common/icon_pr_hover.png);
+  background-repeat: no-repeat;
+}
+/*---*/
+footer .f_list ul {
+  margin: 0 225px;
+  margin-bottom: 190px;
+}
+footer .f_list ul li a {
+  font-size: 0.75rem;
+  color: #371410;
+}
+footer .f_list ul li a:hover {
+  color: #fc914d;
+}
+/*-----copyright-----*/
+footer p {
+  text-align: center;
+}
+footer p small {
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  color: #371410;
+}
+
+/*------------レスポンシブ タブレット-----------*/
+@media screen and (min-width:641px) and (max-width: 980px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .inner {
+    width: auto;
+  }
+  /*-----*/
+  header .inner {
+    width: 95vw;
+  }
+  header form {
+    margin-right: 10%;
+  }
+  header form input[type="search"] {
+    width: 45vw;
+  }
+  #button {
+    display: none;
+  }
+  main .inner .cover {
+    display: none;
+  }
+  main .pickup {
+    padding-top: 70%;
+    text-align: center;
+  }
+  main .pickup .shop_btn {
+    margin-bottom: 20px;
+  }
+  main .pickup .shop_btn p {
+    position: static;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  main .info dl {
+    width: 95%;
+    font-size: 1.3rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #totop {
+    bottom: 3%;
+  }
+  footer .inner {
+    width: 95vw;
+    background-image: none;
+  }
+  footer .f_list {
+    margin-bottom: 10vh;
+  }
+  footer .f_list ul {
+    margin: 0 10%;
+  }
+  footer .f_nav ul li a {
+    font-size: 0.8rem;
+  }
+  footer .f_nav>ul>li>a,
+  footer .f_nav>ul>li span {
+    font-size: 1.3rem;
+  }
+  footer .f_nav>ul>li:last-child {
+    width: calc(95vw/6);
+  }
+  footer .f_nav>ul>li:last-child ul {
+    display: block;
+  }
+  footer .f_nav>ul>li:last-child ul li {
+    margin-bottom: 10%;
+  }
+  footer .f_nav>ul>li:last-child ul li:nth-of-type(odd) {
+    float: left;
+  }
+  footer .f_nav>ul>li:last-child ul li:nth-of-type(odd) {
+    padding-left: 40%;
+  }
+  footer .f_nav>ul>li:last-child ul li:last-of-type {
+    padding-left: 0;
+  }
+}
+/*------------レスポンシブ sp-----------*/
+@media screen and (max-width:640px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .inner {
+    width: auto;
+  }
+  /*-------*/
+  header .g_nav {
+    display: none;
+    background-color: rgba(250, 205, 200, 0.9);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    padding-top: 65px;
+    margin: 0;
+  }
+  header .g_nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    border-top: 1px solid #fa8072;
+  }
+  header .g_nav ul li {
+    text-align: center;
+    width: 100%;
+    height: 15vw;
+    border-bottom: 2px dashed rgba(242,242,242,0.7);
+    box-sizing: border-box;
+  }
+  header .g_nav ul li:last-child {
+    border-bottom: none;
+  }
+  header .g_nav ul li a {
+    color: #371410;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 4% 0;
+    box-sizing: border-box;
+  }
+  header .g_nav ul li::after {
+    content: "";
+  }
+  footer .inner {
+    background-image: none;
+  }
+  footer .f_nav>ul>li:not(.f_nav>ul>li:nth-of-type(6)) {
+    display: none;
+  }
+  #button {
+    display: none;
+  }
+  main .info .banner {
+    display: none;
+  }
+  /*-------*/
+  .ds_f {
+    display: block;
+  }
+  header .header_form form {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  /*-------*/
+  header .logo {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  header .logo img {
+    width: 50%;
+  }
+  header .hum_btn {
+    display: block;
+    position: fixed;
+    top: 8px;
+    left: 10px;
+    z-index: 6;
+    background-color: #fa8072;
+    border-radius: 50px;
+    width: 45px;
+    height: 45px;
+  }
+  header .hum_btn p {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/common/hum_btn.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+  }
+  header form {
+    margin-right: 0;
+  }
+  header form input[type="search"] {
+    width: 80vw;
+  }
+  /*モバイル用Loginボタン*/
+  header .login_btn {
+    position: fixed;
+    top: 8px;
+    right: 75px;
+    width: 45px;
+    height: 45px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  header .login_btn p {
+    background-image: url(../images/common/sp_icon_login.png);
+    background-position: center center;
+  }
+  header .login_btn p a {
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+  }
+  /*モバイル用買い物かごボタン*/
+  header .cart_btn {
+    position: fixed;
+    top: 8px;
+    right: 20px;
+    margin-top: 0;
+    width: 45px;
+    height: 45px;
+    z-index: 4;
+    background-color: rgba(255, 255, 255, 0);
+  }
+  header .cart_btn .cart_look {
+    background-image: url(../images/common/sp_icon_cartin.png);
+    background-position: center center;
+  }
+  header .cart_btn .cart_look a {
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+  }
+  /*----- main ----- */
+  main .pickup {
+    padding-top: 75vw;
+  }
+  main .pickup #pickup_img {
+    margin-bottom: 15px;
+  }
+  main .pickup .shop_btn {
+    margin-bottom: 15px;
+  }
+  main .pickup .shop_btn p {
+    margin-right: auto;
+    margin-left: auto;
+    position: static;
+    width: 100px;
+    height: 30px;
+  }
+  main .pickup .shop_btn p a {
+    font-size: 0.875rem;
+    font-weight: normal;
+    padding-top: 5px;;
+  }
+  main .info dl {
+    margin: 0 15px;
+    font-size: 0.875rem;
+  }
+  main .info dl dt {
+    width: 30vw;
+  }
+  main .info dl dd {
+    margin-left: 0;
+  }
+  main .info .banner {
+    display: none;
+  }
+  main .info .sp_banner {
+    text-align: center;
+    display: block;
+  }
+  #totop {
+    right: -25px;
+    bottom: 0;
+  }
+  #totop p {
+    width: 50%;
+  }
+  #totop p a {
+    font-size: 0;
+    color: transparent;
+    line-height: 0;
+  }
+  /*-----footer-----*/
+  footer .inner {
+    height: auto;
+    width: 90%;
+  }
+  footer .logo {
+    display: none;
+  }
+  footer .f_nav {
+    margin-bottom: 30px;
+  }
+  footer .f_nav>ul>li:nth-of-type(6) ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20%;
+  }
+  footer .f_nav>ul>li:nth-of-type(6) {
+    text-align: center;
+  }
+  footer .f_nav>ul>li:nth-of-type(6) ul li {
+    margin-right: 0;
+  }
+  footer .f_nav>ul>li:nth-of-type(6)>a {
+    text-align: center;
+    display: block;
+  }
+  footer .f_list {
+    margin-bottom: 15px;
+  }
+  footer .f_list ul {
+    margin: 0;
+    text-align: center;
+  }
+  footer p {
+    padding-bottom: 20px;
+  }
+  footer p small {
+    font-size: 0.75rem;
+  }
+}
+
