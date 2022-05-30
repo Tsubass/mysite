@@ -1,0 +1,741 @@
+@charset "utf-8";
+
+/* =====================テンプレ===================== */
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,p,dl,dt,dd{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.clear-fix{
+  clear: both;
+  display: block;
+  content: "";
+}
+img{
+  vertical-align: bottom;
+}
+/* =====================共通===================== */
+body{
+  background-color: #ddbb99;
+  font-family: "游明朝",sans-serif;
+  color: #5b362e;
+  display: none;
+}
+.inner{
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ds-f{
+  display: flex;
+}
+/* =====================header===================== */
+header{
+  background-color: #fff3b8;
+  background-image: url(../images/common/h_bgc.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:5;
+}
+header .inner{
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ====リサイズ用のcss==== */
+header.small{
+  background-size: contain;
+}
+header.small .pc_h h1 a{
+  display: block;
+  width: 50%;
+}
+header.small .pc_h h1 a img{
+  display:block;
+  width: 100%;
+}
+header.small .pc_h .h_nav nav ul li{
+  font-size: 1rem;
+}
+header.small .pc_h .h_nav{
+  margin-left: 15%;
+}
+header.small .pc_h .h_nav p:first-child{
+  font-size: 1.5rem;
+}
+header.small .pc_h.ds-f,header.small .pc_h .h_nav .ds-f{
+  padding-top:10px;
+}
+header.small .pc_h .h_nav nav ul li:nth-child(5){
+  margin-left:200px;
+}
+header.small .pc_h .h_nav nav ul li:last-child{
+  margin-left: 20px;
+}
+header.small .pc_h .h_nav nav ul li a img{
+  width:50%;
+}
+header.small .pc_h .h_nav nav ul li a{
+  text-align: center;
+}
+/* ===リサイズここまで=== */
+
+header .pc_h.ds-f .h_logo{
+  padding-bottom: 15px;
+}
+header .pc_h.ds-f,header .pc_h .h_nav .ds-f{
+  padding: 30px 0 0 50px;
+}
+header .pc_h .h_nav{
+  margin-left:12%;
+}
+header .pc_h .h_nav p a{
+  text-decoration: none;
+  color: #5b362e;
+}
+header .pc_h .h_nav p:first-child{
+  font-size: 1.875rem;
+  text-shadow:2px 2px 4px rgb(255,255,255),2px 2px 4px rgb(255,255,255),2px 2px 4px rgb(255,255,255),2px 2px 4px rgb(255,255,255),2px 2px 4px rgb(255,255,255),-2px -2px 4px rgb(255,255,255),-2px -2px 4px rgb(255,255,255),-2px -2px 4px rgb(255,255,255),-2px -2px 4px rgb(255,255,255),-2px -2px 4px rgb(255,255,255);
+}
+header .pc_h .h_nav nav ul li{
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+header .pc_h .h_nav nav ul li:first-child{
+  margin-left: 0;
+}
+header .pc_h .h_nav nav ul li:nth-child(5){
+  margin-left: 80px;
+}
+header .pc_h .h_nav nav ul li:last-child{
+  margin-left: 60px;
+}
+header .pc_h .h_nav nav ul li a{
+  text-decoration: none;
+  color: #5b362e;
+  position: relative;
+  display: inline-block;
+}
+/* ホバーすると下線がひかれる */
+header .pc_h .h_nav nav ul .underline a::after{
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #5b362e;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+header .pc_h .h_nav nav ul .underline a:hover::after {
+  transform: scale(1, 1);
+}
+
+header .sp_h{
+  display: none;
+}
+
+/* ===ハンバーガーボタン=== */
+.ham{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #5b362e;
+  cursor: pointer;
+}
+.ham_line {
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  transition: all 0.7s;
+}
+.ham_line1 {
+  top: 10px;
+}
+.ham_line2 {
+  top: 18px;
+
+}
+.ham_line3 {
+  top: 26px;
+
+}
+.ham.active .ham_line1{
+  transform: translateY(11px) rotate(145deg);
+  transition-delay: 70ms;
+  top: 8px;
+}
+.ham.active .ham_line2{
+  transition-delay: 0s;
+  opacity: 0;
+}
+.ham.active .ham_line3{
+  transition-delay: 140ms;
+  transform: translateY(-11px) rotate(-145deg);
+  top: 30px;
+}
+/* ===ハンバーガーボタンここまで=== */
+
+header .sp_nav{
+  display: none;
+}
+header .sp_nav ul{
+  text-align: center;
+}
+header .sp_nav ul li{
+  border-top:1px solid #5b362e;
+}
+header .sp_nav ul li a{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-decoration: none;
+  color: #5b362e;
+  font-size: 1rem;
+}
+
+/* =====================main_visual===================== */
+/* ===スライド用=== */
+.main_visual.inner{
+  width: 1280px;
+  margin: 0 auto 70px;
+}
+.main_visual{
+  height: 960px;
+}
+.main_visual ul{
+  position: relative;
+}
+.main_visual ul li{
+position: absolute;
+width: 100%;
+padding-top: 176px;
+}
+.main_visual .pc_coupon{
+  background-color: #ddbb99;
+  position: fixed;
+  top: 40%;
+  right: 0;
+  z-index: 2;
+}
+.main_visual .pc_coupon a{
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.main_visual .pc_coupon a:hover{
+  color: #5b362e;
+}
+.main_visual .pc_coupon::before{
+  content:"";
+  border-top: 23px solid transparent;
+  border-right: 23px solid #ddbb99;
+  border-bottom: 23px solid transparent;
+  position: absolute;
+  top: 0;
+  right: 164px;
+}
+.main_visual .pc_coupon::after{
+  content: url(../images/top/mv_uparrow.png);
+  position: absolute;
+  top: 28px;
+  right: 70px;
+  animation: uparrow 3s infinite;
+}
+/* 矢印が無限に上下に動く */
+@keyframes uparrow{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.title{
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 250px 0 150px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.title span{
+  font-size: 1.5rem;
+}
+
+/* =====================main===================== */
+main .about,main .news,main .commingsoon{
+  width: 100%;
+  background-color: #5b362e;
+  color: #fff;
+}
+main .about h2,main .news h2{
+  border-bottom:1px solid #fff;
+}
+main section,main .banner{
+  padding: 70px 0;
+}
+main .btn li a{
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  display: block;
+  font-size: 1.125rem;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  background-color:#a68965;
+  border: 1px solid #ddbb99;
+  box-sizing: border-box;
+  padding: 10px;
+  line-height: 1;
+}
+main .btn li a::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #261308;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform ease .3s;
+}
+main .btn li a:hover::before{
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+/* ===============About=============== */
+main .about .inner p{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+main .btn li{
+  text-align: center;
+}
+main .btn.ds-f{
+  justify-content: space-around;
+}
+main .btn li a span{
+  font-size: 0.875rem;
+}
+/* ===============Recommend=============== */
+main .recommend .inner h2 span{
+  font-weight: normal;
+  font-size: 1.5rem;
+  display: block;
+  line-height: 1;
+  padding-bottom: 10px;
+}
+main .recommend .recbox{
+  padding-top: 60px;
+  justify-content: space-around;
+  margin-bottom: 45px;
+}
+main .recommend .recbox .rec .price{
+  padding: 15px 0;
+  text-align: center;
+}
+main .recommend .recbox .rec{
+  position: relative;
+  overflow: hidden;
+}
+main .recommend .recbox .rec p:last-child{
+  font-weight: bold;
+  text-align: center;
+}
+main .recommend .inner .recbox .rec .exclusive{
+  position:absolute;
+  top: 0;
+  left: 0;
+  background: #ffdc73;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 7px;
+}
+main .detail{
+  position: absolute;
+  bottom: 35%;
+  right: -240px;
+  z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+main .detail a:hover{
+  background-color:#c4a39b;
+}
+main .detail a{
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color: #5b362e;
+  background-color: #fff;
+  text-align: center;
+}
+/* ===============News===============*/
+main .news dl{
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+main .news dl dt{
+  float: left;
+  margin-left: 100px;
+  margin-bottom:20px;
+}
+main .news dl dd{
+  margin-left: 280px;
+  margin-bottom:20px;
+}
+/* ===============Gallary=============== */
+main .gallery .inner .gal{
+  padding-top: 60px;
+  margin-left: 100px;
+}
+/* ===============Commingsoon=============== */
+main .commingsoon{
+  overflow: hidden;
+}
+main .commingsoon .inner{
+  align-items:center;
+}
+.comming{
+  text-align: left;
+  opacity: 0;
+}
+.soon{
+  text-align: right;
+  opacity: 0;
+}
+.com-anime{
+  animation: slide1 4.5s backwards;
+}
+.son-anime{
+  animation: slide2 4.5s backwards;
+}
+#workshop{
+  text-align: center;
+  font-size: 3rem;
+}
+.spworkshop{
+  display: none;
+}
+@keyframes slide1 {
+  0%{
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  50%{
+    transform: translateX(40%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide2{
+  0%{
+    transform: translateX(0%);
+    opacity: 0;
+  }
+  50%{
+    transform: translateX(-40%);
+    opacity: 1;
+  }
+  100%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+/* ===============banner=============== */
+main .banner{
+  justify-content: space-around;
+}
+main .banner p{
+  box-shadow: 3px 3px 10px #000;
+  transition: .3s;
+}
+main .banner p a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+main .banner p:hover{
+  transform: translate(3px,3px);
+  box-shadow: none;
+}
+
+/* =====================footer===================== */
+footer{
+  padding:60px 0 100px;
+  background-color: #f2ced8;
+  background-image: url(../images/common/f_bgc.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  position: relative;
+}
+footer .empty{
+  display: none;
+}
+footer a:hover{
+  opacity: 0.5;
+}
+footer .f_gnavbox{
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+footer .f_gnavbox li{
+  font-size: 1.5rem;
+}
+footer .f_gnavbox .f_gnav_content li a{
+  text-decoration: none;
+  color: #905c50;
+  font-size: 1rem;
+}
+footer .f_icon{
+  justify-content: center;
+}
+footer .f_icon p{
+  margin-left: 20px;
+}
+footer .f_icon p a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+footer .copy{
+  text-align: center;
+  position: absolute;
+  bottom:5%;
+  right: 30%;
+}
+/* =====================sp===================== */
+@media screen and (max-width:480px){
+  /* ====テンプレ=== */
+  body{
+    font-size: 0.75rem;
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+  .inner{
+    width: auto;
+  }
+  /* ====header=== */
+  header div.inner {
+    width: 100%;
+  }
+  header .pc_h{
+    display: none;
+  }
+  header{
+    background-image: none;
+    width: 100%;
+    position: fixed;
+    padding:5px 0;
+    top: 0;
+  }
+  header .sph_logo img{
+    width: 40%;
+  }
+  header .sp_h p a img{
+    width: 70%;
+  }
+  header .sph_logo{
+    text-align: center;
+  }
+  header .sp_h.ds-f{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+  }
+  header .h_nav nav ul li:last-child{
+    margin:0;
+  }
+  /* ====main_visual=== */
+  .main_visual.inner{
+  width: auto;
+  }
+  .main_visual{
+    height: auto;
+  }
+  .main_visual ul{
+    position:static;
+  }
+  .main_visual ul li{
+    position: static;
+    width: 100%;
+    padding-top: 72px;
+    }
+  .main_visual ul li:not(:first-child){
+      display: none;
+  }
+  .main_visual .pc_coupon p{
+    display: none;
+  }
+  .title{
+    background-size: cover;
+    font-size: 1.5rem;
+    padding:100px 0 50px;
+  }
+  .title span{
+    font-size: 1.125rem;
+  }
+  .pc_coupon{
+    display: none;
+  }
+  /* ====main=== */
+  main section,main .banner{
+    padding:50px 0;
+  }
+  main .btn.ds-f{
+    flex-direction: column;
+  }
+  main .btn li{
+    margin: 0 40px 30px;
+  }
+  main .btn li a {
+    position: static;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  main section h2{
+    padding-bottom: 20px;
+  }
+  main section h2{
+    width: 75%;
+    margin: 0 auto;
+  }
+  /* ===About=== */
+  main .about .inner p{
+    padding-top: 40px;
+  }
+  /* ===Recommend=== */
+  main .recommend .recbox{
+    margin-bottom:0;
+  }
+  main .recommend .inner .recbox .rec .exclusive{
+    left: 17%;
+    padding:10px 20px;
+  }
+  main .recommend .inner h2 span{
+    font-size: 1.25rem;
+  }
+  main .recommend .recbox .rec p{
+    text-align: center;
+  }
+  main .recommend .recbox .rec p img{
+    width: 65%;
+    position: relative;
+  }
+  main .recommend .recbox.ds-f{
+    flex-direction: column;
+  }
+  main .recommend .recbox .rec .price{
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.125rem;
+  }
+  main .recommend .recbox .rec p:last-child{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.125rem;
+  }
+  main .detail{
+    display: none;
+  }
+  /* ===News=== */
+  main .news dl{
+    width: 80%;
+    padding-top: 40px;
+  }
+  main .news dl dt,main .news dl dd{
+    margin-bottom: 10px;
+  }
+  main .news dl dt{
+    margin-left: 40px;
+  }
+  main .news dl dd{
+    margin-left: 130px;
+  }
+  /* ===Gallery=== */
+  main .gallery .inner .gal{
+    margin-left: 0;
+    padding-top: 40px;
+  }
+  /* ===Commingsoon=== */
+  main .commingsoon{
+    align-items: center;
+  }
+  .spworkshop{
+    display: block;
+    text-align: center;
+    font-size: 1.75rem;
+  }
+  #com,#son,#workshop{
+    display:none;
+  }
+  /* ===banner=== */
+  main .banner{
+    flex-direction: column;
+  }
+  main .banner p{
+    box-shadow: none;
+    margin-bottom: 30px;
+  }
+  /* ====footer=== */
+  footer{
+    background-image: none;
+    padding-bottom: 20px;
+  }
+  footer ul.f_gnavbox>li{
+    margin-bottom: 20px;
+    font-size:1.125rem;
+  }
+  footer .f_gnavbox .f_gnav_content li a{
+    font-size: 0.75rem;
+  }
+  footer .f_gnavbox{
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  footer .f_icon {
+    column-gap: 50px;
+    margin-bottom: 20px;
+  }
+  footer .empty{
+    display: block;
+    width: 100%;
+  }
+  footer .copy{
+    text-align: center;
+    position:static;
+  }
+}

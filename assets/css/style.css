@@ -495,8 +495,14 @@ main .works .inner .ds-f .worksbox .img:hover {
   cursor: pointer;
 }
 
-main .works .inner .ds-f .worksbox p:last-child {
+main .works .inner .ds-f .worksbox p:not(first-child) {
   text-align: center;
+}
+
+main .works .inner .ds-f .worksbox p a {
+  text-decoration: none;
+  color: #e83f6f;
+  font-weight: bold;
 }
 
 main .totop {

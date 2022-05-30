@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+header .h_nav nav ul li:nth-child(4) a{
+    text-decoration: underline;
+}
+
+.title{
+    background-image: url(../images/online/main_visual.jpg);
+    margin-bottom: 50px;
+}
+/* ===item=== */
+main .category p a{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: #a68965;
+    border: 1px solid #ddbb99;
+    text-decoration: none;
+    color: #fff;
+}
+main .category{
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+main .category p{
+    width: 150px;
+    text-align: center;
+}
+main .category p a:hover{
+    background-color: #261308;
+}
+main .categorybox{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #5b362e;
+}
+main .item{
+    position: relative;
+    overflow: hidden;
+}
+main .detail{
+    bottom: 240px;
+}
+main .detail a{
+    background-color: #fff;
+}
+main .detail a:hover{
+    background-color: #c4a39b;
+}
+main .item dl{
+    text-align: center;
+    padding: 15px 0;
+}
+main .item dl dd{
+    font-weight: bold;
+}
+main .item dl dd::before{
+    content: "￥";
+}
+main .item .btn{
+    margin-bottom: 100px;
+}
+main .btn li a{
+    background-color: #261308;
+}
+main .btn li a::before{
+    background-color:#a68965;
+}
+/* ===payment=== */
+main .information{
+    width: 50%;
+    margin: 0 auto 80px;
+}
+main .information h2{
+    text-align: center;
+    padding: 50px 0 20px;
+}
+main .information ul li{
+    list-style: disc;
+}
+main .information div:last-child{
+    margin-bottom: 50px;
+}
+
+
+/* ===sp=== */
+@media screen and (max-width:480px){
+    main .category{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        column-gap: 50px;
+    }
+    main .categorybox{
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    main .item p img{
+        width: 80%;
+        margin-left:auto ;
+        margin-right:auto ;
+    }
+    main .item{
+        text-align: center;
+    }
+    main .item dl dd,main .item dl dt{
+        font-size: 1.125rem;
+    }
+    main .btn li a::before{
+        background-color:#ddbb99;
+    }
+}

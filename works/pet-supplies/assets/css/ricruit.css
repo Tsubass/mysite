@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/*RICRUIT.css*/
+main {
+  background-image: url(../images/recruit/recruit_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-bottom: 60px;
+}
+main .recruit {
+  position: relative;
+}
+main .recruit h2 {
+  text-align: center;
+  padding-top: 95px;
+  margin-bottom: 50px;
+}
+main .recruit h3 {
+  position: absolute;
+  top: 273px;
+  left: 10%;
+}
+main .recruit h3:nth-of-type(2) {
+  position: absolute;
+  top: 890px;
+}
+main .recruit dl {
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(242,242,242,0.7);
+  width: 75vw;
+  padding: 60px 0;
+  line-height: 3;
+  font-weight: bold;
+  margin-bottom: 65px;
+}
+main .recruit dl dt {
+  float: left;
+  clear: left;
+  width: 200px;
+  margin-left: 180px;
+}
+main .recruit dl dd {
+  padding-left: 200px;
+  color: #331a17;
+}
+main .recruit .btn {
+  width: 200px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+main .recruit .btn p {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+main .recruit .btn p a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 7% 0;
+  box-sizing: border-box;
+}
+
+/*レスポンシブ　タブレット*/
+
+@media screen and (min-width:641px) and (max-width:980px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .inner {
+    width: auto;
+  }
+  /*-----*/
+  main .recruit h3,
+  main .recruit h3:nth-of-type(2) {
+    position: static;
+    text-align: center;
+    color: #331a17;
+    margin-bottom: 10px;
+  }
+  main .recruit dl dt {
+    float: left;
+    clear: left;
+    width: 200px;
+    margin-left: 50px;
+  }
+}
+
+/*レスポンシブ　スマートフォン*/
+
+@media screen and (max-width:640px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .inner {
+    width: auto;
+  }
+  /*-----*/
+  main .recruit h3,
+  main .recruit h3:nth-of-type(2) {
+    position: static;
+    text-align: center;
+    color: #331a17;
+    margin-bottom: 10px;
+  }
+  main .recruit dl {
+    line-height: 1.5;
+    padding: 10%;
+  }
+  main .recruit dl dt {
+    float: none;
+    width: auto;
+    margin: 0;
+  }
+  main .recruit dl dd {
+    padding: 0;
+    margin-bottom: 15px;
+  }
+}

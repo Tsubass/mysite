@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+main form{
+  width: 50%;
+  margin: 0 auto;
+}
+main form h2{
+  text-align: center;
+  padding-top: 300px;
+  margin-bottom: 50px;
+  font-size:2.25rem;
+}
+main form .mail,main form .pass{
+  margin-bottom: 50px;
+}
+main label{
+  display: block;
+}
+main #loginbtn{
+  color: #fff;
+}
+main .mail input::placeholder,main .pass input::placeholder{
+  font-family: "游明朝",sans-serif;
+}
+main .mail input,main .pass input{
+  display: block;
+  width: 100%;
+  color: #5b362e;
+  background-color: #fff;
+  height: 50px;
+  border: 1px solid #a68965;
+  box-sizing: border-box;
+  padding: 10px;
+}
+main form .forget{
+  text-align: center;
+  margin-bottom: 50px;
+}
+main form .forget a::after{
+  content: "？";
+}
+main form .forget a{
+  color: #5b362e;
+}
+main form input[type=submit]{
+  display: block;
+  width: 50%;
+  font-size: 1.125rem;
+  margin: 0 auto 50px;
+  background-color:#a68965;
+  color: #fff;
+  border: 1px solid #a68965;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 90px;
+  font-family: "游明朝",sans-serif;
+}
+main form input[type=submit]:last-child{
+  margin-bottom: 150px;
+}
+main form input[type=submit]:hover{
+  background-color:#261308;
+}
+/* ===バリデーションチェック用=== */
+main form .alert{
+  color: rgb(245, 69, 69);
+}
+main form .alert::before{
+  content: "※";
+}
+
+/* ===sp=== */
+@media screen and (max-width:480px){
+  main form h2{
+    padding-top:150px;
+    font-size: 1.5rem;
+  }
+  main form input[type=submit]{
+    width:80%;
+    height: 50px;
+  }
+  main form input[type=submit]:last-child{
+    margin-bottom: 50px;
+  }
+  main form input[type=submit]{
+    width: 100%;
+    font-size: 0.875rem;
+  }
+  main form .forget{
+    margin-bottom: 20px;
+  }
+  main form .mail,main form .pass{
+    margin-bottom: 20px;
+  }
+  main #loginbtn{
+  margin-bottom: 20px;
+  }
+}

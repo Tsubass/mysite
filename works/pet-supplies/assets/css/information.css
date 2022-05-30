@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+main{
+  padding: 410px 0;
+  background-image: url(../images/information/pome.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+main section{
+  background-color: rgba(255,255,255,.5);
+  color:#000;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 200px;
+}
+
+main section h2{
+  text-align: center;
+  padding-bottom:75px;
+  padding-top: 120px;
+}
+section dl{
+  padding-left:160px;
+  font-size: 0.875rem;
+}
+
+section dl dt{
+  float: left;
+  margin-left: 50px;
+  padding-top: 10px;
+  width:220px;
+  border-top:1px solid #6a6763;
+}
+section dl dt span{
+  display:inline-block;
+  border: 2px solid #fa8072;
+  color: #fa8072;
+  font-weight: bold;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding:2px 3px 0 3px;
+}
+section dl dd{
+  border-top:1px solid #6a6763;
+  height: 80px;
+  margin-right: 150px;
+  margin-left: 270px;
+  padding-top: 10px;
+}
+section dl dd span{
+  display: block;
+  color: #ff4500;
+  font-weight: bold;
+}
+.double_pad_left{
+  position: absolute;
+  top: 30px;
+  left: 130px;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+.double_pad_right{
+  position: absolute;
+  bottom: 140px;
+  right: 180px;
+  transform: rotate(250deg);
+  z-index: -1;
+}
+.info_banner{
+  position: absolute;
+  top: -20%;
+  left:13%;
+}
+/* -------jsふわっと出てくる--------- */
+.js_scroll{
+  opacity:0;
+  transition: opacity 1s;
+}
+.js_show{
+  opacity:1;
+}
+
+/* -------ps-------- */
+@media screen and (max-width:640px){
+  main{
+    padding-top:200px;
+    padding-bottom:200px;
+  }
+  main .inner{
+    margin:0 10px;
+  }
+  main section h2{
+    box-sizing: border-box;
+    padding-top: 75px;
+    padding-right:10px;
+    padding-left:10px;
+  }
+  main section dl{
+    padding:0;
+  }
+  main section dl dd{
+    margin:0;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #6a6763;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px
+  }
+  main section dl dd:nth-of-type(1){
+    border-top: 1px solid #6a6763;
+  }
+  main section dl dd:nth-of-type(3){
+    padding-bottom: 60px;
+  }
+  main section dl dd:nth-of-type(4){
+    padding-bottom: 80px;
+    letter-spacing: -0.5px;
+  }
+  main section dl dt{
+    width: 100%;
+    border: none;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .double_pad_left{
+    top: -10px;
+    left: 60px;
+  }
+  .double_pad_right{
+    bottom: 0;
+    right: 135px;
+  }
+  .info_banner{
+    top: -120px;
+    left: 0;
+  }
+}

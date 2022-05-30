@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+header{
+  box-sizing: border-box;
+}
+
+main{
+    background-image: none;
+  }
+
+  main .item{
+    width: px;
+    height: px;
+    overflow: hidden;
+  }
+
+  main .item img{
+    width: 90%;
+    border-radius: 50px;
+  }
+
+  main .ds_f .item_caption{
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: 50px;
+    border: dotted 3px #fa8072;
+    padding: 20px;
+  }
+
+  main .ds_f .item_caption h3{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: dotted 1px #fa8072;
+  }
+
+  main .ds_f .item_caption .price{
+    text-align: right;
+    padding: 10px 0;
+    font-weight: bold;
+    color: #ec6941;
+  }
+
+  main .ds_f .item_caption .caption{
+    padding: 20px 0;
+  }
+
+  main .ds_f .item_caption .cartin a{
+  color: #fff;
+  font-weight: bold;
+  background-color: #fa8072;
+  display: block;
+  padding: 20px 0;
+  text-align:center;
+  border-radius: 50px;
+}
+
+main .toshop{
+  text-align: right;
+  text-decoration: underline;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width:640px){
+  main .item{
+    width: auto;
+    padding: 20px;
+  }
+  main .item img{
+    width: 100%;
+  }
+  main .ds_f .item_caption{
+    width: auto;
+  }
+main .toshop{
+  padding-right: 20px;
+}
+}

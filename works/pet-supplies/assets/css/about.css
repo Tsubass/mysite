@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+body{
+  color: #fa8072;
+  font-size: 1.125rem;
+  font-family: "メイリオ", "Meiryo", sans-serif;
+}
+/* ----main----- */
+main{
+  background-image: url(../images/about/dog_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom:220px;
+  background-position-x: 50%;
+}
+main .inner h2{
+  width: 850px;
+  padding-top: 230px;
+  color:#591212;
+  font-size: 2.5rem;
+  font-family:'Meiryo UI',sans-serif;
+  line-height: 1.75;
+  margin-bottom: 220px;
+}
+/* --------section--------- */
+section{
+  width: 960px;
+  box-sizing: border-box;
+  border-radius:5px;
+  background-color:rgba(255,255,255,.3);
+  margin-bottom: 220px;
+  color: #000;
+}
+section h3{
+  text-align: center;
+  padding:50px 0 40px;
+}
+/* ------MESSAGE------- */
+.message .m_text h4{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: メイリオ,sans-serif;
+  margin-bottom: 10px;
+}
+.message .ds_f p:first-child{
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+.message .m_text p{
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  padding-right:10px;
+  padding-left:10px;
+  letter-spacing: 5px;
+}
+.m_text .syatyo_name{
+  text-align: right;
+  padding:20px 10px 20px 0;
+}
+.m_text .syatyo_name p{
+  font-size: 1.5rem;
+}
+/* ----------VISION------- */
+.vision h4{
+  text-align: center;
+  font-size: 2.25rem;
+}
+.vision p{
+  padding:45px 130px 130px 150px;
+  letter-spacing: 5px;
+}
+/* -------jsふわっと出てくる--------- */
+.js_scroll{
+  opacity:0;
+  transition: opacity 1s;
+}
+.js_show{
+  opacity:1;
+}
+
+/* -------ps---------- */
+@media screen and (max-width:640px){
+  main .inner h2{
+  width: 100%;
+  font-size: 1.875rem;
+  line-height: 1.5;
+  text-align: center;
+  }
+  section{
+    margin: 0 10px 50px;
+    width: auto;
+  }
+  .message .m_text h4{
+    padding:20px 0;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+  .message .m_text p{
+    font-size: 1.125rem;
+    padding:0px 20px;
+  }
+  .message .ds_f p:first-child{
+    box-sizing: border-box;
+    padding-left:0;
+    text-align: center;
+  }
+  section h3{
+    text-align: center;
+    padding:50px 10px 40px;
+  }
+  .m_text .syatyo_name p{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .vision h4 {
+    font-size: 2rem;
+  }
+  .vision p{
+    padding:20px 20px;
+    letter-spacing: 5px;
+  }
+}
+

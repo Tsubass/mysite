@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+header .h_nav nav ul li:nth-child(2) a{
+  text-decoration: underline;
+}
+
+.title{
+  background-image: url(../images/cafe/main_visual.jpg);
+}
+main .inner p:first-child{
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 70px;
+}
+main .products .ds-f{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .products .ds-f li{
+  margin-bottom: 60px;
+}
+main .products .ds-f li dl{
+  text-align: center;
+  padding-top: 20px;
+}
+main dl dd::before{
+  content: "￥";
+}
+main dl dd{
+  font-weight: bold;
+}
+main section {
+  text-align: center;
+}
+main section h2{
+  background-image: url(../images/cafe/main_title.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  padding: 40px 0;
+}
+main .c_exclusive h2 span{
+  font-size: 1.125rem;
+}
+main section dl{
+  width: 35%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+main section dl dt{
+  float: left;
+  clear: both;
+}
+main section dl dd{
+  margin-left: 200px;
+}
+main section dl dd,main section dl dt{
+  padding-top: 10px;
+}
+main .drinks h2,main .sweets h2{
+  padding: 60px 0;
+}
+main .sweets{
+  border-bottom: 1px solid #5b362e;
+  padding-bottom: 100px;
+}
+main .allergy{
+  text-align:center;
+  color: #de6f00;
+  padding: 50px 0;
+}
+main .allergy a{
+  color: #5b362e;
+}
+.toshop{
+  margin: 0 auto 50px;
+  width: 20%;
+}
+
+/* ==要素がふわっと出てくる== */
+.hide{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.hide2{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 0.5s;
+}
+.hide3{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 1s;
+}
+.hide4{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 1.5s;
+}
+.hide5{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 2s;
+}
+.hide6{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 2.5s;
+}
+/* ==要素がふわっと出てくるここまで== */
+
+/* ===sp=== */
+@media screen and (max-width:480px){
+  main .products .ds-f{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  main .products .ds-f li{
+    text-align: center;
+  }
+  main .inner p:first-child{
+    box-sizing: border-box;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  main .products .ds-f li img{
+    width:50%;
+    margin: 0 auto;
+  }
+  main .products .ds-f li dl dt,main .products .ds-f li dl dd{
+    font-size: 1rem;
+  }
+  main section h2{
+    background-size: contain;
+  }
+  main section dl{
+    width:60%;
+    padding-top: 0;
+  }
+  main .c_exclusive h2 span{
+    font-size: 0.875rem;
+  }
+  main section dl dd{
+    margin-left: 130px;
+  }
+  main .drinks,main .sweets{
+    padding-top: 0;
+  }
+  main .toshop{
+    width: 80%;
+  }
+  .hide1{
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+}

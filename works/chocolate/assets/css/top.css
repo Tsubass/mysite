@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+main section h2{
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: 1px solid #5b362e;
+}
+/* ===広告用=== */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .75);
+}
+.popup.open a img{
+  display: block;
+  margin: 0 auto;
+  width:50%;
+}
+.popup-banner {
+  position: relative;
+}
+.popup-close {
+  position: absolute;
+  top: -15px;
+  right: 55px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+/* popup表示時に付加されるclass */
+.popup.open {
+    display: flex;
+    animation: fadeIn .7s;
+    z-index: 6;
+}
+@keyframes fadeIn {
+  from{
+     opacity: 0;
+  }    
+  to{
+  opacity: 1;
+ }
+}
+
+@media screen and (max-width:480px){
+  main section h2{
+    font-size: 1.5rem;
+  }
+}

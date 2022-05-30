@@ -1,0 +1,182 @@
+@charset "utf-8";
+
+header .h_nav nav ul li:nth-child(3) a{
+  text-decoration: underline;
+}
+
+.title{
+  background-image: url(../images/shop/main_visual.jpg);
+  margin-bottom: 150px;
+}
+
+.covid{
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 50px;
+  margin: 0 70px 100px;
+}
+.covtext{
+  color: #5b362e;
+}
+.covid h2{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.shop p:first-child,.shop p:nth-child(2){
+  margin-bottom: 100px;
+  text-align: center;
+}
+.shop p:last-child{
+  margin:0 30px 120px;
+  text-align: left;
+}
+.shop .ds-f{
+  justify-content:space-around;
+}
+.location{
+  background-color: #fff;
+  box-sizing: border-box;
+  padding-right:20px;
+  padding-left:20px;
+  margin-bottom: 50px;
+}
+.location h2{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.location .locationbox dl dt{
+  float: left;
+  clear: both;
+}
+.location .locationbox dl{
+  padding-top: 50px;
+  font-size: 1.125rem;
+}
+.location .locationbox{
+  justify-content: space-between;
+}
+.location .locationbox dl dd{
+  margin-bottom: 50px;
+  margin-left: 70px;
+}
+.location .locationbox dl dd:last-child{
+  margin: 0;
+}
+.location .locationbox dl dd:nth-child(2)::before{
+  content:"〒";
+}
+.location .locationbox dl dd:last-child::before{
+  content:"※";
+}
+.location .locationbox dl dd:nth-child(8){
+  margin-bottom: 10px;
+}
+.cafemenu{
+  margin: 0 auto 50px;
+  width: 20%;
+}
+.sp_map{
+  display: none;
+}
+
+
+/* ==要素がふわっと出てくる== */
+.hide{
+  opacity: 0;
+  transition: opacity 1s;
+}
+.hide2{
+  opacity: 0;
+  transition: opacity 1s;
+  transition-delay: 0.5s;
+}
+/* ==要素がふわっと出てくるここまで== */
+
+@media screen and (max-width:480px){
+  .title{
+    margin-bottom: 100px;
+  }
+  .covid{
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto 80px;
+  }
+  .covid h2{
+    width: 100%;
+    text-align: left;
+  }
+  .shop > p:first-child{
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right:20px;
+    text-align: left;
+  }
+  .shop > p:nth-child(2){
+    margin-bottom: 50px;
+  }
+  .shop > p:nth-child(2) img{
+    width: 80%;
+  }
+  .shop .ds-f p{
+    box-sizing: border-box;
+    padding-left:20px;
+    padding-right: 20px;
+  }
+  .shop .ds-f p img{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .shop p:last-child{
+    margin:0 0 120px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .location{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .location .ds-f{
+    flex-direction: column;
+  }
+  .location h2{
+    font-size: 1.5rem;
+  }
+  .location .locationbox dl{
+    padding-top: 0;
+    font-size: 1rem;
+  }
+  .location .locationbox dl dt{
+    margin-left: 60px;
+  }
+  .location .locationbox dl dd{
+  margin-left: 150px;
+  }
+  .location .locationbox dl dd:nth-child(8){
+    margin-bottom: 30px;
+  }
+  .location .locationbox dl dd:last-child{
+    margin-left: 40px;
+    margin-bottom: 50px;
+  }
+  .location .locationbox dl dd:last-child br{
+    display: none;
+  }
+  .gmap {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    }
+    .gmap iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    }
+    .cafemenu{
+      width: 80%;
+    }
+
+}
