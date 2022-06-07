@@ -37,10 +37,6 @@ body {
   font-family: "游明朝",sans-serif;
 }
 
-.hide {
-  display: none;
-}
-
 /* ===紙吹雪用=== */
 html, body {
   height: 100%;
@@ -55,7 +51,6 @@ html, body {
   width: 100%;
   height: 100%;
   background-color: #E6C73C;
-  /*背景色*/
   pointer-events: none;
 }
 
@@ -66,8 +61,15 @@ html, body {
   height: 100%;
 }
 
+.bg-color {
+  background-color: #fc9e4f;
+}
+
 header {
   background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
 }
 
 header .inner {
@@ -108,7 +110,7 @@ header nav .g_nav li a:hover {
 
 .main_visual {
   position: relative;
-  overflow: hidden;
+  padding-top: 90px;
 }
 
 .main_visual.inner {
@@ -117,91 +119,25 @@ header nav .g_nav li a:hover {
   margin-right: auto;
 }
 
-.main_visual > p:first-child {
+.main_visual.inner p img {
   width: 100%;
-  margin: 0 auto;
 }
 
-.main_visual > p:nth-child(2) {
-  font-size: 2rem;
+.main_visual.inner .mv_text {
   position: absolute;
-  top: 5%;
-  left: 40%;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: bold;
   color: #fff;
-}
-
-.main_visual .human {
-  left: 43%;
-  top: 10%;
-  position: absolute;
-  margin: auto;
-}
-
-.main_visual .explanation {
-  text-align: center;
-}
-
-.main_visual .explanation p {
-  padding-top: 200px;
-  font-size: 2rem;
-}
-
-.main_visual .explanation p:last-child {
-  margin-bottom: 200px;
-}
-
-main button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  font-size: 0.875rem;
 }
 
 main h2 {
   text-align: center;
-  font-size: 2.5rem;
-  padding-top: 50px;
-  margin-bottom: 50px;
-  font-family: 'Yomogi', cursive;
-}
-
-main .quiz {
-  width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 50px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  cursor: help;
-}
-
-main .quiz .quizbox .r_after {
-  text-align: center;
-  padding-bottom: 50px;
-  color: #e83f6f;
-}
-
-main .quiz .quizbox .questionbox {
-  text-align: center;
-  padding-bottom: 30px;
-  font-weight: bold;
-  font-size: 1.125rem;
-}
-
-main .quiz .quizbox .selectbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-main .quiz .right, main .quiz .false {
-  text-align: center;
-  padding-top: 100px;
-  font-size: 1.875rem;
-  padding-bottom: 50px;
+  font-size: 3rem;
+  padding: 100px 0;
 }
 
 main section.profile {
@@ -311,7 +247,7 @@ main section.myskills {
 }
 
 main section.myskills h3 {
-  padding-top: 50px;
+  padding-top: 100px;
   margin-bottom: 50px;
   color: #e83f6f;
   text-align: center;
@@ -322,7 +258,7 @@ main section.myskills h3 {
 main section.myskills h4 {
   text-decoration: underline;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 1.125rem;
 }
 
@@ -346,7 +282,7 @@ main section.myskills .inner .skillbox p:last-child {
 
 main section.myskills .inner .skillbox p img {
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 30px;
 }
 
 main section.myskills .inner .school .schoolskills {
@@ -466,9 +402,12 @@ main .works {
   padding-bottom: 100px;
 }
 
-main .works .inner > p {
-  margin-bottom: 50px;
+main .works .inner p {
   text-align: center;
+}
+
+main .works .inner > p:nth-child(3) {
+  margin-bottom: 100px;
 }
 
 main .works .inner .ds-f {
@@ -503,6 +442,10 @@ main .works .inner .ds-f .worksbox p a {
   text-decoration: none;
   color: #e83f6f;
   font-weight: bold;
+}
+
+main .works .inner .ds-f .worksbox p a:hover {
+  text-decoration: underline;
 }
 
 main .totop {
@@ -728,58 +671,8 @@ footer p {
   .main_visual.inner {
     width: 100%;
   }
-  .main_visual.inner > p:nth-child(2) {
-    font-size: 0.875rem;
-    top: 1%;
-    left: 37%;
-  }
-  .main_visual.inner .human {
-    top: 8%;
-    left: 42%;
-  }
-  .main_visual.inner .human img {
-    width: 35%;
-  }
-  .main_visual.inner .explanation p {
-    font-size: 1.125rem;
-    padding-top: 100px;
-  }
-  .main_visual.inner .explanation p:last-child {
-    margin-bottom: 100px;
-  }
   main h2 {
     font-size: 1.75rem;
-  }
-  main button {
-    margin-bottom: 40px;
-  }
-  main .quiz {
-    width: 100%;
-    padding-bottom: 0;
-  }
-  main .quiz .quizbox .r_after {
-    text-align: left;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  main .quiz .quizbox .questionbox {
-    text-align: left;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  main .quiz .quizbox .selectbox {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  main .quiz .right, main .quiz .false {
-    font-size: 1.125rem;
-    padding-bottom: 0;
   }
   main section.profile h4 {
     background-image: url(../images/spidea.png);
