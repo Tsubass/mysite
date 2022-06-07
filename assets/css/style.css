@@ -617,13 +617,15 @@ footer p {
 @media screen and (max-width: 480px) {
   img {
     width: 100%;
-    height: auto;
   }
   .inner {
     width: auto;
   }
   body {
     font-size: 0.875rem;
+  }
+  header {
+    position: static;
   }
   header div.ds-f {
     display: block;
@@ -670,6 +672,7 @@ footer p {
   }
   .main_visual.inner {
     width: 100%;
+    padding-top: 0;
   }
   main h2 {
     font-size: 1.75rem;
@@ -774,6 +777,10 @@ footer p {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0 10px;
+  }
+  main .works .inner > p:nth-of-type(3) {
+    padding-top: 50px;
+    text-align: center;
   }
   main .works .inner .ds-f {
     -webkit-box-orient: vertical;
