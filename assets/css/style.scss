@@ -540,7 +540,7 @@ footer{
 @media screen and (max-width:480px){
   img{
     width:100%;
-    height: auto;
+    
   }
   .inner{
     width: auto;
@@ -550,6 +550,7 @@ footer{
   }
   //header
   header{
+    position: static;
     div{
       &.ds-f{
         display: block;
@@ -610,6 +611,7 @@ footer{
   .main_visual{
     &.inner{
       width:100%;
+      padding-top: 0;
     }
   }
   
@@ -756,6 +758,11 @@ footer{
           text-align: left;
           box-sizing: border-box;
           padding: 0 10px;
+
+          &:nth-of-type(3){
+            padding-top: 50px;
+            text-align: center;
+          }
         }
 
         & .ds-f{
