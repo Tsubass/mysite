@@ -145,7 +145,7 @@ $(function(){
             text.split('').forEach(function (element, index) {
                 if (element !== " ") {
                     if (index < 10) {//10文字未満ならその文字数の秒数でanimationを実行する
-                        textbox += '<span style="animation-delay:' + index + 's;">' + element + '</span>';
+                        textbox += '<span style="animation-delay:.' + index + 's;">' + element + '</span>';
                     } else {//10文字以上なら0.1秒ごとにdelayを付与していく
                         var n = index / 10;
                         textbox += '<span style="animation-delay:' + n + 's;">' + element + '</span>';
