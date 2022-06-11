@@ -175,18 +175,19 @@ $(function(){
             $(".has-child").removeClass('active');//activeクラスを削除
             $('.has-child').children('ul').css("display","");//スライドトグルで動作したdisplayも無効化にする
             //ドロップダウンメニュー
-            $(".g_nav").children("li").hover(function(){
+            $(".ds-f").children("li").hover(function(){
             $(this).children("ul").stop().slideToggle(200);
             });
         }
     }
 
-
     // 画面をスクロールをしたら動かす
-    $(window).scroll(function () {
-    PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-    });
-
+    if(width <= 480) {
+        $('.totop').addClass('DownMove');//DownMoveというクラス名を.totopに付与
+        $(window).scroll(function () {
+            PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
+        });
+    }
     //スクロールした際の動き
     function PageTopAnime() {
        let scroll = $(window).scrollTop();

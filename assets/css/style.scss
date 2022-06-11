@@ -1,15 +1,12 @@
 @charset "utf-8";
 
 //変数
-$cWhite:#fff;
+$cWhite:#f3f3f3;
 $chWhite:rgba(255,255,255,0.5);
 $cBlack:#363232;
 $csBlack:#000;
 $cGray:#ccc;
 $cPink:#e83f6f;
-$cOrange:#fc9e4f;
-$cGreen:#8bd649;
-$cYellow:#E6C73C;
 
 
  /* ===リセット=== */
@@ -52,7 +49,7 @@ html,body{
   z-index:-1;/*描画を一番下に*/
   width: 100%;
   height: 100%;
-  background-color:$cYellow;
+  background-color:$cBlack;
   pointer-events: none;
 }
 
@@ -62,23 +59,25 @@ html,body{
   height: 100%;
 }
 
-.bg-color{
-  background-color: $cOrange;
-}
 // ===header===
 header{
-  background-color: $chWhite;
-  position: fixed;
-  width: 100vw;
-  z-index: 2;
+  background-color: $cWhite;
+  width: 100%;
+  height: 90px;
 
   & .inner{
+    width: 100%;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:$chWhite;
+    z-index: 2;
   }
   
-  & nav{
-    & .g_nav{
+  & .g_nav{
+    & .ds-f{
       & li{
         height: 90px;
         line-height: 90px;
@@ -92,6 +91,7 @@ header{
           top: 90px;
           z-index: 2;
           background-color:$cWhite;
+          box-shadow: 0px 8px 16px 0px $cBlack;
         }
 
         & a{
@@ -111,29 +111,12 @@ header{
 }
 //main_visual
 .main_visual{
-  position: relative;
+  box-sizing: content-box;
   padding-top:90px;
-
-  &.inner{
-    width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    & p{
-      & img{
-      width: 100%;
-      }
-    }
-    & .mv_text{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform:translate(-50%,-50%);
-      font-size: 4rem;
-      font-weight: bold;
-      color: $cWhite;
-    }
-  }
+  height: 500px;
+  background-image: url(../images/main_visual.jpg);
+  background-size: cover;
+  overflow: hidden;
 }
 
 //main
@@ -144,82 +127,42 @@ main{
     padding: 100px 0;
   }
 
-
-  
   & section{
+    &:not(.works) .inner{
+      width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     //Profile
     &.profile{
-      background-color: $cOrange;
+      background-color: $cWhite;
       padding-bottom: 100px;
 
-      & h4{
-        text-align: center;
-        background-image: url(../images/idea.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        font-size: 1.5rem;
-        height: 180px;
-        line-height: 120px;
-        margin-left: 150px;
-      }
-    
-      & .profilebox{
-        position: relative;
+      & .profile_box{
+        margin-bottom: 50px;
+        justify-content: space-around;
 
-        & .contents{
-          width:800px;
-          margin-left: auto;
-          margin-right: auto;
-          margin-bottom: 100px;
-          position: relative;
-          justify-content: space-between;
-          
-          & span{
-            color: $cPink;
-            text-decoration: underline;
+        & .profile_img{
+          width: 200px;
+          height:200px;
+          border: 2px solid $cBlack;
+
+          & img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
           }
-          & p{
-            &:first-child{
-              width: 320px;
-            }
-  
-            &:last-child{
-              width: 350px;
-            }
-  
-            & img{
-              display: block;
-              width: 100%;
-              height: 100%;
-            }
-          }
-  
-          & .text{
-            width: 350px;
-            margin:0;
-            padding: 5px;
-            background-color: $cWhite;
-            border: 5px solid $cBlack;
-          }
-  
-          & .image{
-            width: 320px;
-            border: 5px solid $cBlack;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            padding: 10px;
-            background: $cWhite;
-          }
-  
-          & .line{
-            position: absolute;
-            top: 10%;
-            left: 47.8%;
-            height: 130px;
-            transform: rotate(90deg);
-            border: 3px solid $cBlack;
-            background-color: $cBlack;
+        }
+
+        & ul{
+          width:350px;
+          margin: 0;
+
+          & li{
+            list-style-type: disc;
+            font-size: 1.125rem;
+            padding-bottom: 10px;
+
           }
         }
       }
@@ -231,20 +174,21 @@ main{
       }
 
       & .mywish{
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        
         & h3{
           text-align: center;
           font-size: 1.5rem;
           margin-bottom: 20px;
         }
+
+        & span{
+          color:$cPink;
+          font-weight: bold;
+        }
       }
     }
     //My skills
     &.myskills{
-      background-color: $cGreen;
+      background-color: $cWhite;
       padding-bottom: 100px;
 
       & h3{
@@ -262,25 +206,20 @@ main{
         margin-bottom: 30px;
         font-size: 1.125rem;
       }
-      & .inner{
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    
-        & .skillbox{
-          width: 250px;
+      & .skillbox{
+        width: 250px;
 
-          & p{
-            font-size: 0.875rem;
+        & p{
+          font-size: 0.875rem;
       
-            &:last-child{
+          &:last-child{
             padding-left: 20px;
-            }
+          }
 
-            & img{
-              display: block;
-              margin: 0 auto 30px;
-            }
+          & img{
+            display: block;
+            margin: 0 auto 30px;
+          }
           }
         }
 
@@ -308,83 +247,10 @@ main{
             }
           }
         }
-      }
     }
-    //Contact me
-    &.contact{
-      background-color: $cGreen;
-      padding-bottom: 100px;
-      
-      & .inner{
-        width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-
-        &>p{
-          margin-bottom: 50px;
-        }
-        & form{
-
-          & label{
-            float: left;
-            width: 200px;
-          }
-          & .name,.email,.coment{
-            margin:0 auto 50px;
-            width: 60%;
-          }
-          & .submit{
-            width: 50%;
-            margin: 0 auto;
-            text-align: center;
-
-            & input{
-              box-shadow: 1px 1px 3px $csBlack;
-              padding: 10px 50px;
-              transition: .3s;
-              cursor: pointer;
-              background-color:$cOrange;
-              border: 1px solid $csBlack;
-            
-              &:hover{
-                transform: translate(1px,1px);
-                box-shadow: none;
-              } 
-            }
-          }
-          & input[name="myname"],input[type="email"]{
-            display: block;
-            width: 100%;
-            padding-top: 10px;
-            border:none;
-            border-bottom: 1px solid $csBlack;
-            background-color: $cGreen;
-            resize: none;
-            padding: 10px;
-          }
-
-          & textarea{
-            display: block;
-            width: 100%;
-            padding-top: 10px;
-            border:none;
-            border-bottom: 1px solid $csBlack;
-            background-color: $cGreen;
-            resize: none;
-            padding: 10px;
-          }
-
-          & .alert{
-            color: $cPink;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
-  //Works
-  & .works{
-    background-color:$cOrange;
+    //Works
+  &.works{
+    background-color:$cWhite;
     padding-bottom: 100px;
   
     & .inner{
@@ -405,6 +271,17 @@ main{
             box-shadow: 3px 3px 10px $csBlack;
             transition: .3s;
             margin-bottom: 10px;
+            width: 300px;
+            height: 175px;
+            
+            & a{
+              & img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                object-position:top;
+              }
+            }
   
             &:hover{
               transform: translate(3px,3px);
@@ -430,11 +307,92 @@ main{
       }
     }
   }
+  & .empty{
+    width: 100%;
+  }
+    //Contact me
+    &.contact{
+      background-color: $cWhite;
+      padding-bottom: 100px;
+      
+      & .inner{
+        &>p{
+          margin-bottom: 50px;
+        }
+        & form{
+
+          & label{
+            float: left;
+            width: 200px;
+          }
+          & .name,.email,.coment{
+            margin:0 auto 50px;
+            width: 60%;
+          }
+          & .submit{
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+
+            & input{
+              box-shadow: 1px 1px 3px $csBlack;
+              padding: 10px 50px;
+              transition: .3s;
+              cursor: pointer;
+              background-color:$cWhite;
+              border: 1px solid $csBlack;
+            
+              &:hover{
+                transform: translate(1px,1px);
+                box-shadow: none;
+              } 
+            }
+          }
+          & input[name="myname"],input[type="email"]{
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            border:none;
+            border-bottom: 1px solid $csBlack;
+            background-color: $cWhite;
+            resize: none;
+            padding: 10px;
+          }
+
+          & textarea{
+            display: block;
+            width: 100%;
+            padding-top: 10px;
+            border:none;
+            border-bottom: 1px solid $csBlack;
+            background-color: $cWhite;
+            resize: none;
+            padding: 10px;
+          }
+
+          & .alert{
+            color: $cPink;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+//footer
+footer{
+  color: $cWhite;
+  background-color:transparent;
+  padding: 200px 0 100px;
+  position: relative;
+
   & .totop{
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    top: 5%;
     right: calc((100% - 1280px)/2);/*表示される画面の横幅が大きくなっても常に画面の右下に表示される*/
-    opacity: 0;
 
     & a{
       display: block;
@@ -442,6 +400,7 @@ main{
 
       &:hover{
         opacity: 0.5;
+        animation: UpAnime 1.5s infinite;
       }
       
       & img{
@@ -451,63 +410,16 @@ main{
         width: 80%;
       }
     }
-
-    & .upactive{
-
-      &:hover{
-        animation: Totop 2s infinite;
-        @keyframes Totop{
-          0%{
-            transform: translateY(0);
-          }
-          50%{
-            transform: translateY(-20px);
-          }
-          100%{
-            transform: translateY(0);
-          }
-        }
-      }
-    }
-    &.UpMove{
-      animation: UpAnime 0.5s forwards;
-
-      @keyframes UpAnime{
-        from {
-          opacity: 0;
-        transform: translateY(100px);
-        }
-        to {
-          opacity: 1;
-        transform: translateY(0);
-        }
-      }
-    }
-    &.DownMove{
-      animation: DownAnime 0.5s forwards;
-
-      @keyframes DownAnime{
-        from {
-          opacity: 1;
-        transform: translateY(0);
-        }
-        to {
-          opacity: 1;
-        transform: translateY(100px);
-        }
-      }
-    }
   }
 
-  & .empty{
-    width: 100%;
+  @keyframes UpAnime {
+    0%,100%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-20px);
+    }
   }
-}
-
-//footer
-footer{
-  background-color:transparent;
-  padding: 200px 0 100px;
 
   & .eachTextAnime{
     font-size: 3.125rem;
@@ -540,7 +452,6 @@ footer{
 @media screen and (max-width:480px){
   img{
     width:100%;
-    
   }
   .inner{
     width: auto;
@@ -550,11 +461,12 @@ footer{
   }
   //header
   header{
-    position: static;
-    div{
-      &.ds-f{
-        display: block;
-        justify-content: left;
+    height: auto;
+    & .inner{
+      width: auto;
+      position:static;
+      display: block;
+      justify-content: left;
 
         & h1{
           text-align: center;
@@ -567,8 +479,7 @@ footer{
           }
         }
 
-        & nav{
-          & .g_nav{
+        & .g_nav{
             & li{
               position: relative;
 
@@ -601,86 +512,56 @@ footer{
                 }
               }
             }
-          }
         }
-      }
     }
   }
 
   //main_visual
   .main_visual{
-    &.inner{
-      width:100%;
-      padding-top: 0;
-    }
+    padding-top:0;
+    height:30%;
+    background-position: center;
   }
   
   //main
   main{
     & h2{
       font-size: 1.75rem;
+      padding: 50px 0;
     }
 
     & section{
+      &:not(.works) .inner{
+        width:auto;
+      }
       //profile
       &.profile{
-        & h4{
-          background-image: url(../images/spidea.png);
-          font-size: 1.125rem;
-          margin-left: 0;
-          line-height: 130px;
-        }
-        & .profilebox{
-          & .contents{
-            width:100%;
-            flex-direction: column;
+        padding-bottom: 100px;
 
-            & p{
-              &:first-child{
-                margin-bottom:100px;
-              }
-            }
+        & .profile_box{
+          display: block;
+          box-sizing: border-box;
+          padding:0 10px;
 
-            & .line{
-              height: 105px;
-              transform: rotate(0deg);
-            }
-
-            &.highschool{
-              & .line{
-                top: 170px;
-              }
-            }
-            &.college{
-              & .line{
-                top:125px;
-              }
-            }
-            &.society1{
-              & .line{
-                top: 195px;
-              }
-            }
-            &.society2{
-              & .line{
-                top:240px;
-              }
-            }
-            &.society3{
-              & .line{
-                top: 195px;
-              }
-            }
-
-            & .image,.text{
-              margin: 0 auto;
+          & .profile_img{
+            width:50%;
+            height:auto;
+            margin: 0 auto 50px;
+          }
+  
+          & ul{
+            width:auto;
+  
+            & li{
+              margin-left: 30px;
+              font-size: 1rem;
             }
           }
         }
+
         & .github{
           font-size: 0.875rem;
         }
-
         & .mywish{
           width: 100%;
           margin: 0;
@@ -692,12 +573,10 @@ footer{
           }
         }
       }
+
       //My skills
       &.myskills{
         & .inner{
-          width: 100%;
-          margin: 0;
-
           & .skillbox{
             margin: 0 auto;
 
@@ -759,6 +638,10 @@ footer{
           box-sizing: border-box;
           padding: 0 10px;
 
+          &:nth-of-type(1){
+            text-align: left;
+          }
+
           &:nth-of-type(3){
             padding-top: 50px;
             text-align: center;
@@ -789,13 +672,46 @@ footer{
         }
       }
     }
-
+  }
+  //footer
+  footer{
+    padding-top: 100px;
+    
     & .totop{
-      right: 0;
-      bottom:0;
-      opacity: 0;
-      transform: translateY(100px);
-      z-index: 2;
+      position: fixed;
+      top:auto;
+      right:0;
+      bottom: 0;
+      transform: translate(100px);
+
+      &.UpMove{
+        animation: UpAnime 0.5s forwards;
+  
+        @keyframes UpAnime{
+          from {
+            opacity: 0;
+            transform: translateY(100px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      }
+      &.DownMove{
+        animation: DownAnime 0.5s forwards;
+  
+        @keyframes DownAnime{
+          from {
+            opacity: 1;
+          transform: translateY(0);
+          }
+          to {
+            opacity: 1;
+          transform: translateY(100px);
+          }
+        }
+      }
 
       & a{
         & img{
@@ -803,11 +719,6 @@ footer{
         }
       }
     }
-
-  }
-  //footer
-  footer{
-    padding-top: 100px;
 
     & .eachTextAnime{
     font-size: 1.75rem;
