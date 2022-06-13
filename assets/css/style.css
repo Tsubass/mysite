@@ -615,6 +615,41 @@ footer p {
   main section.myskills h3 {
     font-size: 1.125rem;
   }
+  main section.works .inner > p {
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 10px;
+  }
+  main section.works .inner > p:nth-of-type(1) {
+    text-align: left;
+  }
+  main section.works .inner > p:nth-of-type(3) {
+    padding-top: 50px;
+    text-align: center;
+  }
+  main section.works .inner .ds-f {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  main section.works .inner .ds-f .worksbox .img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+  main section.works .inner .ds-f .worksbox .img a {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+  main section.works .inner .ds-f .empty {
+    display: none;
+  }
   main section.contact .inner {
     width: 100%;
     margin: 0;
@@ -628,40 +663,8 @@ footer p {
     float: none;
     width: 100%;
   }
-  main .works .inner > p {
-    text-align: left;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 0 10px;
-  }
-develops
-  main .works .inner > p:nth-of-type(1) {
-    text-align: left;
-  }
-  main .works .inner > p:nth-of-type(3) {
-    padding-top: 50px;
-    text-align: center;
-  }
-  main .works .inner .ds-f {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  main .works .inner .ds-f .worksbox .img {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  main .works .inner .ds-f .worksbox .img a {
-    display: block;
-    width: 100%;
-    margin: 0;
-  }
-  main .works .inner .ds-f .empty {
-    display: none;
+  main section.contact .inner form .submit input[type=submit] {
+    color: #000;
   }
   footer {
     padding-top: 100px;
