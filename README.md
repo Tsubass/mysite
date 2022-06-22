@@ -12,4 +12,4 @@
 
 ## 制作概要
 - 制作期間：約3週間程度（約50時間）
-- 制作ツール：Photoshop/Illustrator/HTML/CSS（Sass）/JavaScript(jQuery)
+- 制作ツール：Illustrator/HTML/CSS（Sass）/JavaScript(jQuery)
